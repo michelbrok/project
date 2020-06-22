@@ -1,0 +1,595 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
+
+# Movielens assignment
+
+Michel Brok
+22 june 2020
+
+## Executive summary
+A movie recommendation tool can be a powerful service to offer relevant movies to customers. Especially in a situation that the movie library becomes more extensive, a guidance is helpful in selecting the right movie. This becomes even more powerful when the recommendation is being done by someone else, a person that comes close to you?  One of the main reasons why Netflix is succesful, is that they use historical user ratings to predict which movie a customer will like.
+
+This assignment is part of the Harvard Data Science program, applying machine learning and data science to a data set. The goal is to create a predictive model for a movie recommendation set, this will be measured on the basis of RMSE, the Root Mean Square Error. It will be used to predict the ratings for a user outside the data set. For this assignment the Movielens dataset is being used which contains 10 Million of movie ratings.
+
+### Methodology
+
+**1 Data preparation and exploration:**
+
+- 1a: Loading the data set, cleaning the data and adding columns needed
+- 1b: Creating the training set (90%) and test set (10%)
+- 1c: Checking data on wrong/missing values
+
+**2 Data exploration:**
+
+- 2a: Understanding the data set, size and variables
+- 2b: Exloring the different features and influence on ratings
+- 2c: Conclusion of the exploration
+
+**3 Training the model:**
+
+- 3a: Creating training and test set
+- 3b: Mean and the RMSE of the model
+- 3c: Calculating the RMSE
+- 3d: Effect of individual features on RMSE
+- 3e: Effect of comnbined features on RMSE
+
+**4 Funetuning the model:**
+
+- 4a: Best and worse movies
+- 4b: Mitigating the impact of the "few"
+- 4c: Applying the lambda score
+
+**5: Final conclusion**
+
+### Conclusion
+
+The endgoal of this assignment was to create a movie recommendation system that helps in offering the right movies for the right customer. During this excercise different features have been tested and combined to see what the impact was on movie ratings. The difficulty here is that not all features have on their own or even comnbined, the right impact on movie ratings. A watch out in these kind of machine learning models, is the effect of small group of users that are having behaviors which is not close to average and therefore influencing the score which can be difficult to filter, or even forgotten.
+
+**Final RMSE score: 0.8648**
+
+\newpage
+
+## 1: Data preperation
+
+### 1a: Loading the data set
+
+First the used libraries will be loaded.
+
+```{r}
+library(tidyverse)
+library(dplyr)
+library(forecast)
+library(lubridate)
+library(purrr)
+library(tibble)
+library(ggplot2)
+```
+
+After the libraries have been loaded, we will load the data set with the instructions of the assignment.
+
+```{r}
+if(!require(tidyverse)) install.packages("tidyverse", repos = "http://cran.us.r-project.org")
+if(!require(caret)) install.packages("caret", repos = "http://cran.us.r-project.org")
+if(!require(data.table)) install.packages("data.table", repos = "http://cran.us.r-project.org")
+dl <- tempfile()
+ download.file("http://files.grouplens.org/datasets/movielens/ml-10m.zip", dl)
+
+ratings <- fread(text = gsub("::", "\t", readLines(unzip(dl, "ml-10M100K/ratings.dat"))),
+                 col.names = c("userId", "movieId", "rating", "timestamp"))
+
+movies <- str_split_fixed(readLines(unzip(dl, "ml-10M100K/movies.dat")), "\\::", 3)
+ colnames(movies) <- c("movieId", "title", "genres")
+ movies <- as.data.frame(movies) %>% mutate(movieId = as.numeric(levels(movieId))[movieId],
+                                            title = as.character(title),
+                                            genres = as.character(genres))
+
+movielens <- left_join(ratings, movies, by = "movieId")
+```
+
+### 1b: Creating the training and test set
+For this assignment, a validation set is being created (test set) which later will be used to validate the root mean square error score. The training set, which is 90% of the total set will be used to explore (edx).
+
+```{r}
+set.seed(1, sample.kind="Rounding")
+test_index <- createDataPartition(y = movielens$rating, times = 1, p = 0.1, list = FALSE)
+ edx <- movielens[-test_index,]
+ temp <- movielens[test_index,]
+ validation <- temp %>% 
+      semi_join(edx, by = "movieId") %>%
+      semi_join(edx, by = "userId")
+ removed <- anti_join(temp, validation)
+ edx <- rbind(edx, removed)
+
+rm(dl, ratings, movies, test_index, temp, movielens, removed)
+```
+
+### 1c: Checking for 0 and NA's
+
+Checking for reviews with 0 as result:
+
+```{r}
+edx %>% filter(rating == 0)
+validation %>% filter(rating == 0)
+```
+
+There are no ratings with a zero in the data set and in the validation set.
+
+Checking for any NA's in the data set:
+
+```{r}
+any(is.na(edx))
+```
+
+Also no no NA's in the data set, meaning that we don't need to spend time on cleaning the data set.
+
+
+## 2: Data exploration
+
+### 2a: Understanding the edx dataset
+
+The data exploration will be done on the created training set above (edx).
+
+```{r}
+str(edx)
+dim(edx)
+dim(validation)
+```
+
+The following features can be found in the data set:  User ID's, movieID's, rating, timestamps and genres. In the edx dataset there are 9.000.055 observation or rows, and 6 columns. In the validation set there are 999.999 observation and also 6 columns, which is correct based on the 10% validation set creation.
+
+A deeper look into the variables:
+
+```{r}
+n_distinct(edx$userId)
+n_distinct(edx$movieId)
+```
+
+There are 69878 different users and 10677 different movies.
+
+### 2b: Exloring the different features and influence on ratings
+
+**Movie ratings**
+Below you can see that there are a bit more then 9 million movie ratings in the edx data set. The average rating is 3.5, with a mnimum of 0.5 and max of 5 points. 
+
+```{r}
+length(edx$rating)
+summary(edx$rating)
+```
+
+Most of the ratings are given between 3 and 4.
+
+```{r}
+qplot(edx$rating, xlab = "Movie rating",  bins = 100)
+```
+
+**Distribution of movie ratings**
+
+```{r}
+edx %>% 
+count(movieId) %>% 
+ggplot(aes(n)) +
+geom_histogram(bins = 30, color = "black") +
+scale_x_log10() +
+ggtitle("Ratings per movie")
+```
+
+It seems that the number of movies has impact on the hight of the rating, but this could also be due the fact that populair movies are perhaps watched more often.
+
+```{r}
+edx %>% 
+count(userId) %>% 
+ggplot(aes(n)) +
+geom_histogram(bins = 30, color = "black") +
+scale_x_log10() +
+ggtitle("Users giving ratings")
+```
+
+There is quite some differences between the number of ratings that users a giving, which could mean that a group of users could potentially affect ratings.
+
+**Most populair movies**
+
+The top 3 movies are Pulp Fiction, Forrest Gump and Silence of the Lambs, all having average ratings above 3.
+
+```{r}
+edx %>% group_by(title) %>% summarise(number = n()) %>%
+arrange(desc(number))
+```
+
+**Average ratings distributed over the year**
+
+```{r}
+avg <- edx %>% mutate(year = year(as_datetime(timestamp))) %>%
+group_by(year) %>%
+summarize(avg = mean(rating))
+plot(avg)
+```
+
+Movies before 2002 and after 2008 are getting on average higher scores. The years of 2002 - 2005 where not so good movie years. 
+
+**Beste rated genres**
+
+```{r}
+edx %>% group_by(genres) %>% summarize(avg_rating = mean(rating)) %>% arrange(desc(avg_rating))
+```
+
+The Animation genre is scored best in average ratings, followed by Drama and Action movies. Is that also the most populair movie in term of ratings?
+
+**Most rated genres**
+
+```{r}
+edx %>% group_by(genres) %>% summarize(sum = sum(rating)) %>% arrange(desc(sum))
+```
+
+The best rated genre is not the most rated. The comedy and drama genre are having by far the most ratings.
+
+**Is there any influence of days and hours on ratings?**
+
+```{r}
+edx %>% mutate(week_of_day = weekdays(as_datetime(timestamp))) %>% group_by(week_of_day) %>% summarize(rating_count = n()) %>% ggplot(aes(week_of_day, rating_count)) + geom_point()
+```
+
+The most ratings are given on Monday and Tuesday, where you would maybe expect that Saturday and Sunday are days where most ratings are given. This could mean that the ratings are being given later then the movies are being watched. 
+
+**How does that reflect to the average ratings given per week?**
+
+```{r}
+edx %>% mutate(week_of_day = weekdays(as_datetime(timestamp))) %>% group_by(week_of_day) %>% summarize(rating_mean = mean(rating)) %>% ggplot(aes(week_of_day, rating_mean)) + geom_point()
+```
+
+The highest ratings are given on Saturday, followed by Monday and Sunday. Comparing with the number of ratings are given, then that doesn't match with average ratings on the same days.
+
+**Looking at the times**
+
+```{r}
+edx %>% mutate(hr_of_day = hour(as_datetime(timestamp))) %>% group_by(hr_of_day) %>% summarize(rating_count = n()) %>% ggplot(aes(hr_of_day, rating_count)) + geom_line()
+```
+
+The most ratings are being given in the evening, around 8pm. 
+
+### 2c: Conclusions of feature exploration
+With an average of 3.5 and a median of 4 means that movies are getting quite good reviews. Movies before 2002 and after 2005 are getting better ratings. The Drama and Comedy genre are by far most populair in terms of the amount of ratings, but Animation|Imax|sciFI genre is getting on average the highest rating. It seems that there is a group of people giving more ratings then others, something that needs that can potentially influence the model that needs to be built for recommendation purposes.
+
+Looking at the timings, the most ratings are given on Monday and Tuesday, whilst the best ratings are given on Saturday and Sunday. Most of the ratings are being given in the evening as you would expect.
+
+## 3: Training the model
+
+The model will be trained with a test and training set. We will test every feature seperatly first to understand the effect on the RMSE, then later we will add features together also here to understand the effect of RMSE.
+
+### 3a: Creating test and training set
+
+First we need to create a training and test set as we are only using the test set created in the beginning of the code for validation purposes. The test data set will be around 10% of the data.
+
+```{r}
+library(caret)
+set.seed(1, sample.kind = "Rounding")
+ind <- createDataPartition(edx$rating, times = 1, p = 0.2, list = FALSE)
+train_set <- edx [-ind, ]
+test_set <- edx[ind, ]
+test_set <- test_set %>% 
+  semi_join(train_set, by = "movieId") %>%
+  semi_join(train_set, by = "userId")
+```
+
+### 3b: Mean and RMSE of the model
+
+Let's start building the model with the average and the first RMSE.
+
+```{r}
+mu_hat <- mean(edx$rating)
+mu_hat
+```
+
+If we test the above average model on the rating, we would get:
+
+```{r}
+library(caret)
+naive_rmse <- RMSE(train_set$rating, mu_hat)
+naive_rmse
+rmse_results <- tibble(method = "Average", RMSE = naive_rmse)
+rmse_results
+```
+
+The naive RMSE has a score of 1.06, rhe RMSE needs to be below 0.86490 so we will continue to improve.
+
+### 3c: Computing the RMSE 
+
+To test the results for each model, we will write a function that computes the RMSE for ratings and their predictors.
+
+```{r}
+RMSE <- function(true_ratings, predicted_ratings){sqrt(mean((true_ratings - predicted_ratings) ^2))
+  }
+```
+
+To start computing the RMSE for each predictor, we will not use the normal code (fit <- lm(rating ~ as.factor(movieId), data = movielens). Using the normal code creates long waiting time and a error in R Studio. Therefore a workaround will be used.
+
+### 3d: Effect of individual features
+
+**Effect movie on ratings**
+
+Let's try the find out what the effect is on the movie is on ratings, hereby we will compute the average ratings first to see what the effect of the movie is on average rating score. 
+
+```{r}
+mu <- mean(train_set$rating)
+movie_avg <- train_set %>%
+  group_by(movieId) %>%
+  summarize(b_i = mean(rating - mu))
+predict_movie1 <- test_set %>%
+  left_join(movie_avg, by = 'movieId') %>%
+  mutate(pred = (mu + b_i)) %>%
+  pull(pred)
+movie_rmse <- RMSE(predict_movie1, test_set$rating)
+movie_results <- tibble(method = "Movie results", RMSE = movie_rmse)
+movie_results
+```
+
+The effect of the movie results in a RMSE of 0.94, which is lower then the naive method but still far to high.
+
+**Effect of the user on ratings**
+
+```{r}
+user_avg1 <- train_set %>%
+  group_by(userId) %>%
+  summarize(b_u = mean(rating - mu))
+predict_user1 <- test_set %>%
+  left_join(user_avg1, by = 'userId') %>%
+  mutate(pred1 = (mu + b_u)) %>%
+  pull(pred1)
+user_rmse1 <- RMSE(predict_user1, test_set$rating)
+movie_results1 <- tibble(method = "Users results", RMSE = user_rmse1)
+movie_results1
+```
+
+The effect of the user is less powerfull then the effect of the movie.
+
+**Effect of genre on movie ratings**
+
+```{r}
+genre_avg <- train_set %>%
+  group_by(genres) %>%
+  summarize(b_g = mean(rating - mu))
+predict_genre <- test_set %>%
+  left_join(genre_avg, by = 'genres') %>%
+  mutate(pred2 = (mu + b_g)) %>%
+  pull(pred2)
+genres_rmse <- RMSE(predict_genre, test_set$rating)
+genre_results <- tibble(method = "Genre results", RMSE = genres_rmse)
+genre_results
+```
+
+Genres seems the be less effective then movie and users.
+
+**Effect of time (weekdays) on ratings**
+
+```{r}
+wkday_avg <- train_set %>%
+  mutate(wkday = weekdays(as_datetime(timestamp))) %>%
+  group_by(wkday) %>%
+  summarize(b_w = mean(rating - mu))
+predict_wkday <- test_set %>%
+  mutate(wkday = weekdays(as_datetime(timestamp))) %>%
+  left_join(wkday_avg, by = 'wkday') %>%
+  mutate(pred3 = (mu + b_w)) %>%
+  pull(pred3)
+wkday_rmse <- RMSE(predict_wkday, test_set$rating)
+wkday_results <- tibble(method = "wkday results", RMSE = wkday_rmse)
+wkday_results
+```
+
+Effect of time, weekdays in this case, is even worse then the rest of the features. 
+
+**Conclusion testing individual features**
+
+Bringing all tested element together:
+
+```{r}
+bind_rows(movie_results, movie_results1, genre_results, wkday_results)
+```
+
+The movie feature is having the most impact on the ratings, but we stil far from where we need to be. What happens if we combine features? Will we then come closer to target?
+
+### 3e: Effect of combined features
+
+The effect of movies on ratings is already being calculated in the previous section, now we will add features together.
+
+**Combining movie and users**
+
+```{r}
+user_avg <- train_set %>%
+  left_join(movie_avg, by = 'movieId') %>%
+  group_by(userId) %>%
+  summarize(b_u = mean(rating - mu - b_i))
+  
+  pred_users <- test_set %>%
+  left_join(movie_avg, by = 'movieId') %>%
+  left_join(user_avg, by = 'userId') %>%
+  mutate(pred = mu + b_i + b_u) %>%
+  pull(pred)
+user_movie_rmse <- RMSE(pred_users, test_set$rating)
+user_movie_results <- tibble(method = "User_movie results", RMSE = user_movie_rmse)
+user_movie_results
+```
+
+This is already much better then the average but still not low enough, let's look at the other predictors:
+
+**Adding genre to the combination
+
+```{r}
+genre_movie_avg <- train_set %>%
+  left_join(movie_avg, by = 'movieId') %>%
+  left_join(user_avg, by = 'userId') %>%
+  group_by(genres) %>%
+  summarize(b_g = mean(rating - mu - b_i - b_u))
+
+ pred_genre_movie <- test_set %>%
+  left_join(movie_avg, by = 'movieId') %>%
+  left_join(user_avg, by = 'userId') %>%
+  left_join(genre_avg, by = 'genres') %>%
+    mutate(pred = mu + b_i + b_u + b_g) %>%
+    pull(pred)
+ genre_movie_rmse <- RMSE(pred_genre_movie, test_set$rating)
+  genre_movie_results <- tibble(method = "genre_movies_results", RMSE = genre_movie_rmse)
+  genre_movie_results
+```
+
+With adding the genre to the user and movie feature, the score doesn't really improve.
+
+**Adding time to the combination**
+
+```{r}
+genre_movie_users_time <- train_set %>%
+  left_join(movie_avg, by = 'movieId') %>% 
+  left_join(user_avg, by = 'userId') %>%
+  left_join(genre_avg, by = 'genres') %>%
+  mutate(wkday = weekdays(as_datetime(timestamp))) %>%
+  group_by(wkday) %>%
+  summarize(b_w = mean(rating - b_g - mu - b_i - b_u))
+
+pred_genre_movie_users_time <- test_set %>%
+  left_join(movie_avg, by = 'movieId') %>%
+  left_join(user_avg, by = 'userId') %>%
+  left_join(genre_avg, by = 'genres') %>%
+  mutate(wkday = weekdays(as_datetime(timestamp))) %>%
+  left_join(wkday_avg, by = 'wkday') %>%
+  mutate(pred = mu + b_i + b_u + b_g + b_w) %>%
+    pull(pred)
+ genre_movie_users_time_rmse <- RMSE(pred_genre_movie_users_time, test_set$rating)
+  genre_movie_users_time_results <- tibble(method = "genre_movies_results", RMSE = genre_movie_users_time_rmse)
+  genre_movie_users_time_results
+```
+
+With adding time to the rest of the features, also here the score doesn't improve futher. Bringing all scores together:
+
+```{r}
+bind_rows(movie_results, user_movie_results, genre_movie_results, genre_movie_users_time_results)
+```
+
+**Conclusion**
+
+The user combined with the movie results are now giving the best results, but still not under the 0.86490 so we will continue in finetuning the model. To improve our model, we will look into the best and worse scored movies to see if we can find anything that doesn't seem correct.
+
+## 4: Finetuning the model
+
+With the users and movie features combined, we are getting close to the target score of 0.86490 RMSE. But can we futher improve the score? In the exploration of the data set we saw that there is maybe an influence of a small group of people rating more movies then others, or maybe they other way around. Let's analyse the assumption. 
+
+### 4a: Best and worst movies
+
+The best scoring movies are:
+
+```{r}
+movie_titles <- edx %>% 
+  select(movieId, title) %>%
+  distinct()
+movie_avg %>% 
+  left_join(movie_titles, by = "movieId") %>%
+  arrange(desc(b_i)) %>%
+  slice(1:10) %>%
+  pull(title)
+```
+
+In the trained "movie_avg" set we see that the best scoring movies are not the ones you would expect and besides that, the titles are looking a bit strange.
+
+Top 10 worst scoring movies:
+
+```{r}
+movie_avg %>%
+  left_join(movie_titles, by = "movieId") %>%
+  arrange(b_i) %>%
+  slice(1:10) %>%
+  pull(title)
+```
+
+Also here we see strange titles appearing in the worst scored movies. Let's look how often they are rated:
+
+```{r}
+train_set %>%
+  count(movieId) %>%
+  left_join(movie_avg, by = "movieId") %>%
+  left_join(movie_titles, by = "movieId") %>%
+  arrange(desc(b_i)) %>%
+  slice(1:10) %>%
+  pull(n)
+```
+
+For the best ranked movies we see that quite a few people have rated these movies, with just a few users we will have more uncertainty. Therefore we will use Penalized Least Squared improving the model.
+
+### 4b: Mitigating the impact of the "few" 
+
+The Penalized Least Squared method will be used to limit the impact of the few users reviews, first we need to pick a penalty term. Therefore we use cross-validation to understand which is the best lambda value.
+
+```{r}
+lambdas <- seq(0, 10, 0.25)
+rmses <- sapply(lambdas, function(lambda){
+  
+mu <- mean(train_set$rating)
+  
+# adjust mean by movie effect and penalize for low numbers:
+  b_i <- train_set %>%
+  group_by(movieId) %>%
+  summarize(b_i = sum(rating - mu)/(n()+lambda))
+
+# adjust mean by user and movie effect and penalize for low numbers:
+  b_u <- train_set %>%
+  left_join(b_i, by = "movieId") %>%
+  group_by(userId) %>%
+  summarize(b_u = sum(rating - b_i - mu)/(n()+lambda))
+
+  predicted_ratings <- test_set %>%
+    left_join(b_i, by = "movieId") %>%
+    left_join(b_u, by = "userId") %>%
+    mutate(pred = mu + b_i + b_u) %>%
+    pull(pred)
+  return(RMSE(predicted_ratings, test_set$rating))
+})
+qplot(lambdas, rmses)
+```
+
+In the graph above we see that 5 is the best lambda score to work with, which we will apply on the validation set created before.
+
+### 4c: Applying lambda score on validation 
+
+In the previous section we looked for the best lambda score, this we will apply now to the validation set.
+
+```{r}
+lambda <- 5
+
+mu <- mean(edx$rating)
+  
+movie_effect <- edx %>%
+  group_by(movieId) %>%
+  summarize(b_i = sum(rating - mu)/(n()+lambda))
+
+user_effect <- edx %>%
+  left_join(movie_effect, by = "movieId") %>%
+  group_by(userId) %>%
+  summarize(b_u = sum(rating - b_i - mu) / (n()+lambda))
+
+fit <- validation %>%
+  left_join(movie_effect, by = "movieId") %>%
+  left_join(user_effect, by = "userId") %>%
+  mutate(pred = mu + b_i + b_u) %>%
+  pull(pred)
+
+final_rmse <- RMSE(validation$rating, fit)
+final_rmse
+final_rmse <- tibble(method = "Final_RMSE_score", RMSE = final_rmse)
+```
+
+```{r}
+options(pillar.sigfig = 5)
+bind_rows(movie_results, user_movie_results, final_rmse)
+```
+
+With a score of 0.8648 we do better then the target score of 0.86490.
+
+**Conclusion**
+
+Combining different features together improved the RMSE-score. The combination of users together with movies scored best with 0.865 but still not below target. After finalizing with the lamda score we could get a better score with is below the target score needed. 
+
+## 5: Final conclusion
+
+The endgoal of this assignment was to create a movie recommendation system that helps in offering the right movies for the right customer. During this excercise different features have been tested and combined to see what the impact was on movie ratings. The difficulty here is that not all features have on their own or even comnbined, the right impact on movie ratings. A watch out in these kind of machine learning models, is the effect of small group of users that are having behaviors which is not close to average and therefore influencing the score which can be difficult to filter, or even forgotten.
+
