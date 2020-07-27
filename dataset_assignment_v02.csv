@@ -1,0 +1,971 @@
+userid;nps;giving_product;page_type;source-used;city;avg_session_dur;avg_session_quality;avg_time_page;registration_completed;pages_session
+22439367;10;Yes;Blog;cpcfacebook;Rotterdam;00:00:57;2.9;00:00:37;0;1.00
+91a3a75b;9;Yes;Blog;direct;Eersel;00:05:16;40.4;00:01:21;0;1.00
+84bc3cb5;7;No;Blog;googleorganic;Raalte;00:38:25;48.2;00:00:28;0;4.00
+3015c55f;8;No;Blog;direct;Amsterdam;00:33:31;52.2;00:00:05;0;2.50
+00aca954;(not set);Yes;Blog;bingorganic;Amsterdam;00:32:51;34.1;00:24:01;0;1.00
+b822a3c1;10;Yes;Blog;googlecpc;Hilversum;00:32:42;41.1;00:00:07;0;1.50
+39eaf631;9;Yes;Blog;googlecpc;Amsterdam;00:31:36;22.7;00:00:14;0;1.50
+83a3466f;(not set);Yes;Blog;googleorganic;Menaldum;00:27:20;60.5;00:00:05;0;1.00
+5ebde9f9;6;Yes;Blog;googleorganic;Steenbergen;00:24:12;6.3;00:00:03;0;1.00
+c7b97462;6;No;Blog;direct;Groningen;00:19:05;57.5;00:00:18;0;3.00
+a8954894;(not set);Yes;Blog;googlecpc;Amsterdam;00:18:19;8.5;00:00:10;0;1.00
+f77cf8da;6;No;Blog;googleorganic;The Hague;00:17:53;62.5;00:00:19;0;1.50
+57452526;6;Yes;Blog;direct;Shinagawa City;00:17:23;48.8;00:02:08;0;4.00
+5bd28e55;(not set);Yes;Blog;googlecpc;Bleiswijk;00:14:56;34.6;00:00:09;0;2.50
+941830a6;(not set);Yes;Blog;direct;Amsterdam;00:14:44;51.3;00:03:27;0;4.33
+436e6cc7;(not set);Yes;Blog;direct;Shinjuku City;00:13:23;46.0;00:05:42;0;1.50
+63674659;6;Yes;Blog;googlecpc;Beneden-Leeuwen;00:12:49;18.7;00:01:38;0;2.50
+b040572c;(not set);Yes;Blog;googleorganic;Amsterdam;00:11:23;34.6;00:00:25;0;2.50
+3d9f0f18;7;Yes;Blog;direct;Amsterdam;00:11:17;68.8;00:01:19;0;5.00
+afa379cd;9;Yes;Blog;googlecpc;Emmen;00:11:10;13.4;00:04:37;0;2.60
+828d871e;8;Yes;Blog;googleorganic;Rotterdam;00:10:57;29.0;00:00:03;0;1.00
+bc651280;5;Yes;Blog;direct;Paramaribo;00:10:44;54.2;00:00:21;0;3.33
+01b0007b;(not set);Yes;Blog;direct;Tilburg;00:09:34;45.5;00:00:21;0;4.00
+210b3caa;6;No;Blog;direct;Ede;00:09:02;71.1;00:00:05;0;1.50
+8c6fface;8;Yes;Blog;googlecpc;Nieuwegein;00:08:35;42.3;00:02:34;0;1.00
+122b262a;8;No;Blog;googleorganic;Schijndel;00:08:34;4.9;00:00:13;0;1.50
+2bea246a;9;Yes;Blog;direct;Amsterdam;00:07:39;66.0;00:00:58;0;5.00
+2376f3d4;8;Yes;Blog;direct;Kerkrade;00:07:38;68.8;00:00:59;0;1.50
+4b9c375d;(not set);No;Blog;direct;Haarlem;00:07:38;60.5;00:00:33;0;5.00
+e1d1d1e0;6;Yes;Blog;direct;Heinkenszand;00:07:36;13.3;00:00:13;0;1.50
+71a382b9;(not set);Yes;Blog;direct;Weert;00:07:29;53.4;00:00:30;0;7.00
+9b1ade6c;6;Yes;Blog;googlecpc;Rotterdam;00:07:28;3.8;00:00:23;0;1.00
+2c0017f6;8;Yes;Blog;googleorganic;Loon op Zand;00:07:16;65.7;00:00:23;0;2.50
+e19d8931;5;No;Blog;referral;Pattaya City;00:07:15;35.5;00:00:24;0;2.50
+206edfc4;8;Yes;Blog;googlecpc;Utrecht;00:07:04;5.6;00:00:31;0;2.50
+7e5fef3e;8;No;Blog;googleorganic;Hilversum;00:07:00;33.4;00:00:15;0;1.00
+ff4a1480;(not set);Yes;Blog;googleorganic;Best;00:06:58;32.4;00:00:35;0;1.00
+10257c3b;8;Yes;Blog;googlecpc;Oldenzaal;00:06:57;52.2;00:00:04;0;1.00
+161a48fc;7;Yes;Blog;direct;Utrecht;00:06:50;70.8;00:00:42;0;1.50
+dd31e313;8;Yes;Blog;googlecpc;Sprang-Capelle;00:06:04;27.0;00:00:38;0;2.50
+e8d34dde;10;Yes;Blog;direct;Amsterdam;00:05:57;55.0;00:00:54;0;3.60
+885fd305;9;Yes;Blog;googlecpc;Hilversum;00:05:42;65.2;00:00:16;0;2.00
+1d8b2f22;6;Yes;Blog;googlecpc;Venray;00:05:34;6.6;00:00:12;0;1.00
+46024bb1;(not set);Yes;Blog;googleorganic;Zoetermeer;00:05:20;60.8;00:00:07;0;1.50
+9d4f6b71;(not set);Yes;Blog;googlecpc;Bussum;00:05:19;45.8;00:00:54;0;1.00
+80033b52;(not set);No;Blog;googlecpc;Oss;00:05:17;68.1;00:00:07;0;1.00
+194a3174;8;Yes;Blog;googlecpc;Pijnacker;00:05:07;60.1;00:00:12;0;3.00
+fa603182;(not set);Yes;Blog;direct;Bilthoven;00:05:00;66.2;00:00:04;0;1.50
+a8fbf4b5;7;Yes;Blog;googlecpc;Doetinchem;00:04:49;28.5;00:00:04;0;1.00
+f1c8e779;9;Yes;Blog;direct;Enschede;00:04:41;10.3;00:00:05;0;1.50
+64b11a2f;8;Yes;Blog;googlecpc;Breda;00:04:38;16.0;00:00:18;0;1.50
+ff5ca78c;9;Yes;Blog;direct;Aalten;00:04:33;45.5;00:00:07;0;1.00
+9fc9c866;9;Yes;Blog;direct;Schoonhoven;00:04:26;58.4;00:00:19;0;3.00
+d6d3f57f;8;No;Blog;googlecpc;Veenendaal;00:04:19;14.8;00:00:24;0;1.62
+945a3104;8;Yes;Blog;googleorganic;Groningen;00:04:11;64.4;00:00:29;0;2.50
+a9505a19;8;Yes;Blog;googleorganic;Dordrecht;00:04:09;6.6;00:00:26;0;1.00
+90726497;7;No;Blog;googleorganic;Dalfsen;00:04:06;16.2;00:00:49;0;1.00
+a5df4a6e;(not set);Yes;Blog;googleorganic;Eindhoven;00:03:45;43.1;00:00:15;0;1.50
+1a85df94;10;Yes;Blog;referral;Delft;00:03:29;30.8;00:00:12;0;2.50
+c242bc4c;8;Yes;Blog;googleorganic;Hardenberg;00:03:25;4.8;00:00:16;0;2.50
+146963fd;9;Yes;Blog;direct;Amersfoort;00:03:03;47.1;00:00:07;0;1.50
+e4773124;7;No;Blog;googlecpc;Millingen aan de Rijn;00:03:03;4.2;00:01:39;0;1.00
+165bbb81;(not set);Yes;Blog;direct;Amsterdam;00:02:54;9.3;00:00:04;0;1.50
+3b291761;(not set);Yes;Blog;googlecpc;Waddinxveen;00:02:52;31.4;00:00:12;0;2.20
+d3477193;7;Yes;Blog;googleorganic;Venlo;00:02:46;70.8;00:00:09;0;1.00
+07f3c1d6;(not set);Yes;Blog;googleorganic;Utrecht;00:02:35;31.8;00:00:19;0;1.50
+3e8226e0;(not set);Yes;Blog;direct;Nootdorp;00:02:34;5.0;00:00:18;0;1.67
+e084e43c;(not set);Yes;Blog;googlecpc;Rotterdam;00:02:26;7.6;00:00:20;0;3.33
+a3347dc6;10;Yes;Blog;googlecpc;Hellevoetsluis;00:02:24;45.4;00:00:11;0;5.00
+7030496d;10;Yes;Blog;googleorganic;Willemstad;00:02:22;2.5;00:00:00;0;1.00
+b6615735;9;Yes;Blog;direct;Assen;00:02:16;62.7;00:00:06;0;3.00
+0d451445;7;Yes;Blog;googleorganic;Tiel;00:02:12;9.7;00:00:07;0;1.50
+fdd03772;10;No;Blog;googleorganic;Culemborg;00:01:55;2.8;00:00:06;0;1.50
+0259b967;6;Yes;Blog;googlecpc;Rotterdam;00:01:52;3.4;00:00:09;0;1.00
+39871d91;(not set);Yes;Blog;direct;Haaksbergen;00:01:47;20.0;00:00:04;0;1.00
+d48fe954;7;Yes;Blog;direct;Amsterdam;00:01:45;14.0;00:00:07;0;1.50
+2fb7284b;5;No;Blog;googlecpc;Deventer;00:01:42;7.3;00:00:11;0;1.00
+954adbe1;6;Yes;Blog;googleorganic;Rotterdam;00:01:41;12.0;00:00:12;0;1.00
+9679e75c;7;Yes;Blog;googleorganic;Amsterdam;00:01:33;49.4;00:00:02;0;1.00
+0b590ef0;7;Yes;Blog;googleorganic;Amsterdam;00:01:30;6.6;00:00:23;0;1.00
+824179a3;(not set);Yes;Blog;referral;Amsterdam;00:01:28;1.9;00:00:18;0;2.50
+03ee2416;(not set);Yes;Blog;googlecpc;Breda;00:01:22;11.5;00:00:14;0;2.50
+979c815a;7;Yes;Blog;googleorganic;Utrecht;00:01:07;9.7;00:00:07;0;1.50
+6a130ee3;(not set);No;Blog;googleorganic;Damwald;00:01:06;3.0;00:00:08;0;1.50
+abfae089;(not set);Yes;Blog;googlecpc;Amsterdam;00:01:05;7.9;00:00:33;0;1.50
+f88963a0;(not set);Yes;Blog;googleorganic;Hulst;00:01:03;2.9;00:00:15;0;1.00
+c965995f;9;No;Blog;googlecpc;Helden;00:01:02;9.7;00:00:06;0;2.50
+a82a5133;10;Yes;Blog;direct;Bunnik;00:00:55;3.6;00:00:06;0;1.00
+83d8740d;8;No;Blog;direct;Oss;00:00:41;18.2;00:00:10;0;1.50
+6c78a4a5;(not set);Yes;Blog;googlecpc;Rotterdam;00:00:38;2.4;00:00:18;0;1.50
+20aa32c5;(not set);Yes;Blog;referral;Kathmandu;00:00:35;2.2;00:00:15;0;1.50
+f4c9cc2b;10;No;Blog;googlecpc;Amsterdam;00:00:30;1.2;00:00:59;0;1.50
+f79b4af3;(not set);Yes;Blog;direct;Haarlem;00:00:23;4.3;00:00:04;0;1.50
+036c8e3c;(not set);Yes;Blog;direct;Ghent;00:00:21;4.9;00:00:07;0;1.67
+c130ca24;8;Yes;Blog;googleorganic;Berlicum;00:00:13;3.4;00:00:03;0;1.00
+4210bd7f;10;Yes;Blog;exm;Rotterdam;00:05:17;48.2;00:00:20;0;5.00
+979f0993;9;Yes;Blog;exm;Amsterdam;00:24:56;6.2;00:00:34;0;1.50
+3e9b203e;7;No;Blog;googlecpc;Aalsmeer;00:10:27;22.5;00:00:06;0;3.00
+3f5105e3;(not set);Yes;Blog;googleorganic;Almelo;00:00:49;4.2;00:00:08;0;2.50
+d68d1181;(not set);Yes;Blog;exm;Eindhoven;00:52:28;44.8;00:00:08;0;8.00
+d884e7be;6;No;Blog;googleorganic;Oegstgeest;00:09:25;4.8;00:04:42;0;3.00
+823e7e52;6;Yes;Blog;exm;Barendrecht;00:15:42;49.5;00:00:23;0;4.33
+0dbcfd4e;(not set);Yes;Blog;exm;Rotterdam;00:14:07;27.3;00:00:26;0;5.00
+5c309f6d;8;No;Blog;googlecpc;Amsterdam;00:11:26;58.4;00:00:14;0;3.00
+ea9dc750;7;Yes;Blog;exm;Diever;00:09:45;53.7;00:00:12;0;5.00
+e5a0c61e;8;Yes;Blog;googlecpc;Hoorn;00:06:14;33.5;00:00:23;0;3.00
+27567a48;8;Yes;Blog;exm;Nieuwegein;00:04:59;18.4;00:00:11;0;5.00
+284b2c66;8;Yes;Blog;exm;Sneek;00:04:56;43.2;00:00:12;0;7.00
+bc482702;(not set);Yes;Blog;googlecpc;Tegelen;00:04:48;27.1;00:00:07;0;8.00
+eed11d85;5;Yes;Blog;exm;Tholen;00:04:33;20.8;00:00:11;0;5.00
+b6a053c9;10;Yes;Blog;exm;Enschede;00:04:31;9.7;00:01:24;0;3.50
+e733445c;6;Yes;Blog;googlecpc;Venray;00:03:22;3.3;00:00:11;0;3.00
+214b799a;7;Yes;Blog;exm;Amsterdam;00:02:32;6.7;00:00:22;0;4.00
+02ea76d4;(not set);Yes;Blog;googlecpc;Houten;00:02:29;21.9;00:00:13;0;3.00
+44207206;8;No;Blog;exm;'s-Hertogenbosch;00:01:40;2.7;00:00:17;0;3.00
+1780214a;(not set);Yes;Blog;googlecpc;Eindhoven;00:01:28;3.2;00:00:20;0;3.00
+1eb6df8a;7;Yes;Blog;googlecpc;Katwijk aan Zee;00:01:01;2.4;00:00:06;0;3.00
+91bcded4;8;No;Blog;exm;Castricum;00:00:58;7.1;00:00:15;0;4.00
+6fdeb4d2;8;No;Blog;exm;Reuver;00:00:48;18.1;00:00:32;0;1.50
+62004a64;(not set);Yes;Blog;exm;Diepenheim;00:00:07;2.4;00:00:04;0;2.50
+7967d79a;5;Yes;Blog;googlecpc;Utrecht;00:00:02;1.5;00:00:03;0;1.50
+fa63c9b0;7;No;Blog;exm;Tilburg;00:04:48;3.6;00:00:21;0;1.50
+2ba241a7;7;Yes;Blog;exm;Vught;00:01:12;19.2;00:00:09;0;1.50
+ff239eae;7;Yes;Blog;direct;'s-Hertogenbosch;00:01:25;29.2;00:00:07;0;2.50
+0aa9d6b1;7;Yes;Blog;exm;Amsterdam;00:17:22;4.0;00:00:04;0;1.50
+8ccef150;(not set);Yes;Blog;exm;Rotterdam;00:00:09;2.3;00:00:04;0;3.00
+543de1fa;7;Yes;Blog;exm;Sliedrecht;00:13:59;26.8;00:00:27;0;3.00
+fcc9ea94;8;Yes;Blog;exm;Berkhout;00:03:28;4.5;00:00:03;0;4.33
+62c36448;(not set);Yes;Blog;googleorganic;Rijswijk;00:00:34;5.0;00:00:10;0;2.50
+f5d22769;(not set);Yes;Blog;googlecpc;Vinkeveen;00:04:27;6.3;00:00:23;0;1.50
+2afa8246;(not set);Yes;Blog;googlecpc;Purmerend;00:00:07;1.2;00:00:13;0;1.50
+d95c0375;(not set);Yes;Blog;googleorganic;Ermelo;00:04:22;7.4;00:00:18;0;2.50
+2b28141d;10;Yes;Blog;googleorganic;Barendrecht;00:03:24;7.8;00:01:20;0;1.00
+a054f427;8;Yes;Blog;googleorganic;Rotterdam;00:01:48;3.3;00:00:36;0;1.50
+b7a5c7ce;7;Yes;Blog;googleorganic;Hoogvliet Rotterdam;00:01:25;3.9;00:00:22;0;1.67
+6c68ac29;9;No;Blog;googleorganic;Apeldoorn;00:01:09;1.3;00:02:17;0;1.50
+e01d557e;(not set);No;Blog;googleorganic;Amsterdam;00:00:31;1.3;00:01:02;0;1.50
+54fd6482;(not set);Yes;Blog;googleorganic;Bergen op Zoom;00:00:26;2.2;00:00:17;0;1.50
+7e5aecba;8;Yes;Blog;googlecpc;Rijen;00:00:00;1.5;00:00:00;0;1.00
+b066b07c;7;Yes;Blog;googleorganic;Amsterdam;00:00:00;1.6;00:00:00;0;1.00
+f06e8268;8;Yes;Blog;googleorganic;Paramaribo;00:31:42;5.0;00:10:43;0;1.50
+3c65a1ef;(not set);Yes;Blog;direct;Paramaribo;00:04:01;4.4;00:02:40;0;1.50
+810543ce;7;No;Blog;googleorganic;Amsterdam;00:02:00;8.1;00:00:19;0;1.50
+51e95309;10;Yes;Blog;googleorganic;Hengelo;00:04:29;8.8;00:02:04;0;1.00
+6b35934d;(not set);Yes;Blog;exm;Eindhoven;00:01:10;1.5;00:01:10;0;1.00
+726be867;8;Yes;Blog;googleorganic;(not set);00:00:03;5.0;00:00:06;0;1.50
+89674d75;7;Yes;Blog;direct;Nijkerk;00:06:46;36.3;00:00:27;0;2.50
+728a7ad6;7;Yes;Blog;googleorganic;Zundert;00:08:43;5.0;00:00:17;0;1.50
+e9b3f895;6;No;Blog;googleorganic;Roosendaal;00:07:44;4.6;00:00:55;0;2.50
+04df100f;6;No;Blog;googleorganic;The Hague;00:00:00;1.6;00:00:00;0;1.00
+a30a0080;(not set);No;Blog;googleorganic;Goes;00:05:52;9.8;00:01:37;0;1.50
+3b16d0e8;7;Yes;Blog;googleorganic;Rotterdam;00:00:03;1.2;00:00:05;0;1.50
+923c1b1a;(not set);No;Blog;googleorganic;Spijkenisse;00:10:19;30.1;00:02:25;0;3.00
+a383b9f3;(not set);Yes;Blog;bingorganic;Berkel en Rodenrijs;00:08:28;32.7;00:00:11;0;3.00
+8649164f;8;Yes;Blog;googleorganic;Hoogerheide;00:02:36;12.2;00:00:08;0;3.00
+29e526a6;10;Yes;Blog;googleorganic;Almere;00:04:41;4.1;00:03:07;0;1.00
+d80e2f1e;7;Yes;Blog;googlecpc;Zwolle;00:00:00;1.4;00:00:00;0;1.00
+e1394e6c;7;Yes;Blog;googleorganic;Helmond;00:00:00;1.8;00:00:00;0;1.00
+3a4affd3;7;Yes;Blog;exm;Rotterdam;00:00:00;0.0;00:00:00;0;1.00
+37b368d6;7;Yes;Blog;exm;Amsterdam;00:03:40;3.1;00:01:41;0;1.50
+5934d5ee;(not set);Yes;Blog;googleorganic;Rotterdam;00:00:05;1.3;00:00:10;0;1.50
+11f9e162;8;Yes;Blog;googleorganic;Dilsen-Stokkem;00:02:38;36.5;00:00:25;0;1.50
+e1dc7de1;(not set);Yes;Blog;exm;Rijen;00:11:53;5.2;00:11:39;0;1.00
+896733b9;8;Yes;Blog;exm;Oude Pekela;00:02:37;3.6;00:00:35;0;1.50
+5eda8666;9;Yes;Blog;googleorganic;Zwolle;00:00:07;1.2;00:00:14;0;1.50
+1616abe8;7;Yes;Blog;exm;Purmerend;00:00:00;1.6;00:00:00;0;1.00
+e58d84ce;(not set);Yes;Blog;googleorganic;Wijk bij Duurstede;00:00:00;2.1;00:00:00;0;1.00
+040b70c3;8;Yes;Blog;cpcsocial;Oude-Tonge;00:00:00;1.6;00:00:00;0;1.00
+0bda06ed;4;Yes;Blog;googlecpc;'s-Gravendeel;00:17:00;46.9;00:02:31;0;1.50
+dcfbaa3b;(not set);Yes;Blog;googlecpc;Heemskerk;00:04:16;60.3;00:00:33;0;1.50
+c2924b7b;8;No;Blog;googleorganic;Best;00:02:46;28.3;00:00:38;0;1.50
+15c182be;7;Yes;Blog;googlecpc;Terneuzen;00:00:03;1.3;00:00:06;0;1.50
+0d2ab45b;10;Yes;Blog;googleorganic;The Hague;00:00:00;1.5;00:00:00;0;1.00
+8a6ed778;8;Yes;Blog;website;Nijmegen;00:13:56;48.2;00:00:40;0;1.00
+1c011730;8;No;Blog;googleorganic;Dronten;00:04:40;5.9;00:01:47;0;1.00
+839081fb;7;Yes;Blog;googlecpc;Rotterdam;00:04:01;4.8;00:03:19;0;1.50
+903830fc;4;Yes;Blog;googleorganic;Amsterdam;00:00:00;1.7;00:00:00;0;1.00
+a51bef0b;(not set);Yes;Blog;googlecpc;Amersfoort;00:05:28;40.1;00:00:05;0;1.00
+e6c571d8;(not set);Yes;Blog;googlecpc;Enkhuizen;00:03:11;34.8;00:00:06;0;2.50
+1d7b7210;9;Yes;Blog;googlecpc;Amsterdam;00:02:26;5.8;00:00:01;0;1.00
+220cefd6;8;Yes;Blog;googleorganic;Amsterdam;00:30:05;51.1;00:00:49;0;1.50
+09616fe6;1;Yes;Blog;googlecpc;Eindhoven;00:24:16;3.4;00:00:07;0;1.00
+99b2a2ac;6;No;Blog;direct;Amsterdam;00:22:11;42.0;00:01:11;0;2.50
+4cce363b;10;Yes;Blog;googlecpc;Zwolle;00:17:41;45.9;00:00:28;0;3.00
+b7a88a5b;10;Yes;Blog;googlecpc;Rotterdam;00:17:34;4.5;00:00:12;0;1.00
+f6bda126;5;Yes;Blog;googlecpc;Nijmegen;00:17:23;5.0;00:00:10;0;1.00
+206436cd;6;No;Blog;googlecpc;Arnhem;00:16:35;30.5;00:00:14;0;1.00
+3e4b4fbd;10;Yes;Blog;googlecpc;Zwolle;00:13:24;38.3;00:00:04;0;1.00
+7b689ee0;(not set);Yes;Blog;googlecpc;Amsterdam;00:09:41;54.4;00:00:13;0;1.00
+bcc8408a;8;Yes;Blog;googlecpc;Mijdrecht;00:07:12;56.0;00:00:15;0;2.50
+9a2b33e7;8;Yes;Blog;googlecpc;Waalwijk;00:06:58;5.0;00:01:21;0;1.50
+5a2c3791;(not set);Yes;Blog;googlecpc;Heerenveen;00:06:00;7.7;00:00:16;0;3.00
+ca96ea82;(not set);Yes;Blog;googlecpc;Rotterdam;00:05:47;6.0;00:00:43;0;2.67
+d501ad1a;(not set);Yes;Blog;googlecpc;Leeuwarden;00:05:21;5.1;00:00:24;0;1.50
+f91afe85;(not set);Yes;Blog;googlecpc;The Hague;00:05:03;45.9;00:00:05;0;1.50
+f841d9cd;8;Yes;Blog;googlecpc;Heerlen;00:04:07;32.2;00:00:11;0;1.50
+9e2a2bcf;(not set);No;Blog;googlecpc;Vinkeveen;00:03:55;4.1;00:00:11;0;1.50
+573e973a;7;Yes;Blog;googlecpc;Lekkerkerk;00:03:54;7.0;00:01:20;0;1.50
+afcfa8c7;8;Yes;Blog;googlecpc;Maassluis;00:03:26;2.7;00:00:09;0;1.50
+115b9ce9;(not set);Yes;Blog;googlecpc;Delft;00:03:12;50.9;00:00:14;0;1.50
+1b3c5de2;8;Yes;Blog;googlecpc;Almere;00:02:59;6.4;00:00:11;0;1.50
+4fa777f5;7;Yes;Blog;googlecpc;Amsterdam;00:02:52;6.3;00:00:05;0;2.50
+d6752389;7;Yes;Blog;googlecpc;Ulft;00:02:19;30.6;00:00:23;0;1.00
+2e9b05f8;6;Yes;Blog;googlecpc;Dongen;00:02:18;3.3;00:00:33;0;2.50
+fe003311;(not set);Yes;Blog;googlecpc;Oosterhout;00:02:08;4.1;00:00:18;0;1.00
+df56507c;7;No;Blog;googlecpc;(not set);00:01:45;2.4;00:00:05;0;1.50
+99abff53;(not set);Yes;Blog;googlecpc;Rotterdam;00:01:42;3.8;00:00:07;0;2.50
+79f2d6a2;(not set);No;Blog;googlecpc;Heerenveen;00:01:33;2.8;00:00:10;0;2.50
+411366c6;(not set);Yes;Blog;googlecpc;Tilburg;00:01:26;2.8;00:00:32;0;1.50
+0d559fda;7;Yes;Blog;googlecpc;Amsterdam;00:01:19;2.8;00:00:13;0;2.50
+b08eaf14;(not set);Yes;Blog;googlecpc;Kerkrade;00:01:15;2.7;00:00:20;0;2.00
+384e4237;7;No;Blog;googlecpc;Dronten;00:01:10;6.6;00:00:14;0;1.50
+aee60a92;(not set);Yes;Blog;googlecpc;Rotterdam;00:01:06;37.9;00:00:06;0;1.50
+5048827e;4;Yes;Blog;googlecpc;Assendelft;00:00:59;2.3;00:00:38;0;1.50
+3a15ca08;(not set);Yes;Blog;googlecpc;Neede;00:00:49;2.5;00:00:32;0;1.50
+af2073b0;(not set);No;Blog;googlecpc;Capelle aan den IJssel;00:00:42;2.6;00:00:18;0;1.00
+4f21c151;10;Yes;Blog;googlecpc;Eindhoven;00:00:40;1.7;00:00:22;0;1.50
+a3a48024;(not set);No;Blog;googlecpc;Dokkum;00:00:24;2.2;00:00:14;0;1.50
+df8eb062;7;Yes;Blog;googlecpc;Eindhoven;00:00:11;1.5;00:00:07;0;1.00
+b7360254;(not set);No;Blog;googlecpc;'s-Gravenzande;00:00:10;3.4;00:00:13;0;1.50
+785d0bf2;6;Yes;Blog;googlecpc;Amsterdam;00:00:03;2.3;00:00:05;0;1.50
+21d43b0b;(not set);Yes;Blog;googleorganic;Houten;00:00:00;1.8;00:00:00;0;1.00
+fe388380;7;Yes;Blog;googlecpc;Elst;00:00:00;1.4;00:00:00;0;1.00
+a2871bff;(not set);No;Blog;bingorganic;(not set);00:08:29;34.5;00:00:33;0;1.50
+062aefb2;(not set);Yes;Blog;googleorganic;Winsum;00:02:09;38.3;00:00:23;0;1.00
+42ff2836;7;Yes;Blog;googleorganic;Assendelft;00:01:27;3.2;00:00:31;0;1.50
+5b3c9d14;8;Yes;Blog;googleorganic;Nieuwegein;00:01:24;3.5;00:00:30;0;1.50
+3d24af3c;8;Yes;Blog;direct;Uitgeest;00:00:05;4.6;00:00:10;0;1.50
+cf7e8788;10;Yes;Blog;googleorganic;Deventer;00:07:50;2.1;00:05:24;0;1.50
+5678fafb;10;Yes;Blog;googleorganic;Amsterdam;00:02:00;3.0;00:00:30;0;1.50
+8592bf98;8;Yes;Blog;googleorganic;Amsterdam;00:01:21;4.3;00:00:35;0;1.50
+1d6bfb3a;8;Yes;Blog;googleorganic;Amsterdam;00:00:34;38.5;00:00:34;0;1.00
+ff37e00e;7;Yes;Blog;googleorganic;(not set);00:21:31;65.4;00:02:03;0;1.50
+0cbb6e04;10;Yes;Blog;exm;Rotterdam;00:05:48;38.4;00:00:56;0;4.00
+96ea2b88;(not set);Yes;Blog;googleorganic;Made;00:02:29;29.0;00:00:35;0;2.50
+3d75d30f;8;No;Blog;direct;'s-Hertogenbosch;00:06:46;34.0;00:01:45;0;1.50
+20ac854f;8;Yes;Blog;googleorganic;IJmuiden;00:04:10;31.7;00:00:17;0;3.00
+c2c95cf5;7;Yes;Blog;googleorganic;Drunen;00:03:38;8.9;00:00:46;0;1.67
+b2a9a4bd;5;Yes;Blog;googleorganic;Markelo;00:02:46;24.4;00:00:25;0;2.50
+1f3a7c44;10;Yes;Blog;googleorganic;Amsterdam;00:01:52;3.7;00:00:18;0;2.50
+57bce140;10;Yes;Blog;googlecpc;Moerkapelle;00:00:00;2.7;00:00:00;0;1.00
+dc9144d4;5;Yes;Blog;googlecpc;Vlaardingen;00:00:00;23.5;00:00:00;0;1.00
+f776ba44;(not set);Yes;Blog;googlecpc;The Hague;00:14:32;2.1;00:00:26;0;1.00
+89b57582;9;No;Blog;bingorganic;'s-Hertogenbosch;00:05:27;35.4;00:00:08;0;1.50
+5ef12870;10;No;Blog;googlecpc;Drachten;00:04:01;3.9;00:00:14;0;2.50
+3e243a14;(not set);Yes;Blog;direct;Steenbergen;00:03:30;37.6;00:00:24;0;2.50
+994a7e85;8;Yes;Blog;googlecpc;Rotterdam;00:02:38;3.7;00:00:41;0;1.50
+b0b9bbf2;8;No;Blog;googlecpc;Zwolle;00:02:32;8.9;00:00:20;0;3.00
+cdf8678e;8;Yes;Blog;googlecpc;Weesp;00:01:08;2.0;00:00:45;0;1.50
+47da9f7c;7;Yes;Blog;googleorganic;Ouderkerk aan den IJssel;00:15:25;61.6;00:05:00;0;3.00
+5c752cf5;8;Yes;Blog;googleorganic;Aalten;00:12:20;5.6;00:10:40;0;1.67
+5ec91e55;8;Yes;Blog;googleorganic;Berkel en Rodenrijs;00:56:09;43.7;00:00:38;0;2.50
+580ccf37;10;Yes;Blog;googleorganic;Paramaribo;00:24:54;47.6;00:03:17;0;1.50
+2c867f6e;(not set);Yes;Blog;googleorganic;Purmerend;00:17:32;2.4;00:29:13;0;1.60
+66ff364b;8;No;Blog;googlecpc;Bergen;00:15:48;1.9;00:00:00;0;1.00
+71a2afe2;6;Yes;Blog;googleorganic;Oisterwijk;00:13:31;38.6;00:02:04;0;2.50
+9b1c82e6;6;No;Blog;googleorganic;Utrecht;00:12:47;31.6;00:01:02;0;2.50
+3d8552e6;(not set);No;Blog;googleorganic;Ouddorp;00:10:22;4.6;00:04:49;0;1.50
+207d69c5;7;No;Blog;googleorganic;Schiedam;00:08:25;49.9;00:01:01;0;1.50
+ec453e17;(not set);No;Blog;googleorganic;Alphen aan den Rijn;00:06:14;4.6;00:01:10;0;1.50
+32efa31c;5;Yes;Blog;googlecpc;Zwolle;00:06:03;1.7;00:12:05;0;1.50
+1e042581;8;Yes;Blog;googleorganic;Eindhoven;00:05:57;41.7;00:01:08;0;1.50
+cac08ee0;10;Yes;Blog;googleorganic;Voorburg;00:05:18;41.6;00:01:29;0;1.00
+2cbf24e3;7;Yes;Blog;googleorganic;Paramaribo;00:04:26;3.7;00:02:57;0;2.50
+cb657d8b;10;Yes;Blog;googlecpc;Roermond;00:04:18;7.9;00:01:43;0;2.50
+ab294742;6;Yes;Blog;googleorganic;Utrecht;00:03:58;34.0;00:01:30;0;2.50
+422f78e2;5;Yes;Blog;googlecpc;Valkenswaard;00:03:37;31.7;00:01:32;0;1.50
+c116b97f;(not set);Yes;Blog;googleorganic;Dordrecht;00:03:35;3.0;00:04:18;0;1.83
+738b3b04;(not set);Yes;Blog;googleorganic;Amsterdam;00:03:10;3.7;00:01:07;0;1.50
+b1861511;(not set);Yes;Blog;googlecpc;Bovenkarspel;00:02:53;3.7;00:01:48;0;2.50
+86470fe6;7;Yes;Blog;googleorganic;Appelscha;00:02:31;4.0;00:03:54;0;1.50
+1d7733d2;7;Yes;Blog;googleorganic;Almelo;00:02:29;2.7;00:02:29;0;1.00
+3f730633;7;Yes;Blog;googleorganic;Amsterdam;00:02:19;6.6;00:01:01;0;1.50
+f21c86b5;10;No;Blog;googleorganic;Barneveld;00:02:17;1.3;00:02:17;0;1.00
+b15be1f8;(not set);Yes;Blog;googleorganic;Epe;00:02:16;1.6;00:04:32;0;1.50
+9dd1d503;7;Yes;Blog;googleorganic;Gorinchem;00:01:52;3.7;00:00:38;0;2.50
+72054b3e;9;Yes;Blog;bingorganic;Rotterdam;00:01:43;2.6;00:00:49;0;1.50
+882efa64;(not set);No;Blog;duckduckgoorganic;Spijkenisse;00:01:39;2.4;00:01:06;0;1.50
+a304f82b;8;No;Blog;googlecpc;Klazienaveen;00:01:19;3.3;00:01:23;0;1.50
+43c1c4ab;6;Yes;Blog;googlecpc;Rotterdam;00:01:14;3.4;00:00:49;0;1.50
+e3ebae32;6;Yes;Blog;googlecpc;Amsterdam;00:01:12;4.5;00:00:24;0;4.00
+7c96afac;(not set);Yes;Blog;googleorganic;Emmeloord;00:01:06;1.2;00:02:11;0;1.50
+95d24b24;7;No;Blog;googleorganic;Rotterdam;00:01:05;2.4;00:01:38;0;1.67
+49824f83;(not set);Yes;Blog;googleorganic;Utrecht;00:00:38;1.2;00:01:15;0;1.50
+a980c298;7;Yes;Blog;googleorganic;IJmuiden;00:00:23;1.3;00:00:45;0;1.50
+b7e9be07;(not set);Yes;Blog;googleorganic;(not set);00:00:21;2.1;00:00:00;0;1.00
+2d0e8c12;10;Yes;Blog;googleorganic;Spijkenisse;00:00:18;2.0;00:00:00;0;1.00
+d9f032a0;(not set);Yes;Blog;googlecpc;Emmen;00:00:13;1.9;00:00:19;0;1.67
+329002cc;7;No;Blog;bingorganic;Hemiksem;00:00:12;1.2;00:00:24;0;1.50
+4f0e3638;9;Yes;Blog;googlecpc;Rotterdam;00:00:11;1.2;00:00:22;0;1.50
+17406079;2;No;Blog;googlecpc;Hilversum;00:00:10;6.1;00:00:19;0;1.50
+6c49baad;7;Yes;Blog;googleorganic;Willemstad;00:00:07;1.1;00:00:14;0;1.50
+19ea9efb;7;Yes;Blog;googleorganic;Voorburg;00:00:04;1.2;00:00:08;0;1.50
+b9f04fb3;7;No;Blog;googlecpc;Zwolle;00:00:04;1.2;00:00:08;0;1.50
+2501fca4;8;Yes;Blog;googleorganic;Ridderkerk;00:00:03;2.4;00:00:06;0;1.50
+57c8a94e;(not set);Yes;Blog;googleorganic;Amsterdam;00:00:03;1.2;00:00:06;0;1.50
+5a527687;2;Yes;Blog;googleorganic;Rijswijk;00:00:03;1.2;00:00:06;0;1.50
+618eb29e;10;Yes;Blog;referral;Wouw;00:00:03;1.3;00:00:06;0;1.50
+7f45683e;7;No;Blog;googleorganic;Almere;00:00:03;1.4;00:00:06;0;1.50
+a0272941;6;Yes;Blog;googleorganic;Trabzon;00:00:03;1.3;00:00:06;0;1.50
+b859092e;(not set);Yes;Blog;googleorganic;Heerlen;00:00:03;1.7;00:00:06;0;1.50
+cba190e8;5;Yes;Blog;googleorganic;Leiden;00:00:03;2.4;00:00:06;0;1.50
+40ec0caa;7;Yes;Blog;direct;Gdansk;00:00:03;1.6;00:00:05;0;1.50
+6eadfa96;(not set);Yes;Blog;googleorganic;Roosendaal;00:00:03;1.4;00:00:05;0;1.50
+e5a1a053;6;Yes;Blog;googleorganic;Bergen op Zoom;00:00:03;1.9;00:00:05;0;1.50
+7ae6ade8;8;No;Blog;googleorganic;Utrecht;00:00:00;1.7;00:00:00;0;1.00
+e8d59bd8;6;Yes;Blog;googleorganic;Nijmegen;00:00:00;1.7;00:00:00;0;1.00
+0e80276f;8;Yes;Blog;googleorganic;Brummen;00:05:31;1.8;00:00:00;0;1.00
+d309093e;7;Yes;Blog;googleorganic;Amsterdam;00:02:51;4.3;00:02:45;0;1.00
+09ff0061;7;Yes;Blog;googlecpc;Gennep;00:01:49;1.5;00:01:25;0;1.00
+810b5b34;10;No;Blog;direct;Helmond;00:00:21;3.7;00:00:00;0;1.00
+ce89df9b;5;Yes;Blog;googleorganic;Rotterdam;00:00:00;1.5;00:00:00;0;1.00
+dbaa818c;6;No;Blog;googlecpc;Capelle aan den IJssel;00:01:20;2.3;00:00:22;0;3.00
+bb68e079;8;No;Blog;googlecpc;Heerhugowaard;00:24:41;46.2;00:01:48;0;3.00
+58cb3a01;6;No;Blog;googleorganic;Mierlo;00:10:16;50.9;00:00:24;0;1.50
+760808f1;10;No;Blog;googleorganic;Roermond;00:03:03;30.5;00:00:15;0;1.67
+091a1bec;8;Yes;Blog;googleorganic;Druten;00:01:09;2.8;00:00:07;0;1.50
+3de173bf;(not set);No;Blog;googleorganic;Hilversum;00:00:19;2.2;00:00:12;0;1.50
+a43f97dd;10;Yes;Blog;famblenddisplay;Venray;00:02:49;6.0;00:05:38;0;1.50
+c4825be0;6;No;Blog;googleorganic;Alphen aan den Rijn;00:32:09;55.3;00:02:05;0;2.50
+e44c3a66;(not set);Yes;Product;googleorganic;Zeist;00:47:18;25.2;00:00:05;0;1.50
+ae5b9d52;(not set);Yes;Brand;googlecpc;Schiedam;00:38:43;25.0;00:00:48;0;1.00
+cb22e233;8;No;Brand;googlecpc;Goes;00:33:10;63.6;00:00:17;0;3.00
+8f7299ce;(not set);Yes;Brand;googlecpc;Breda;00:26:06;28.1;00:01:05;0;1.50
+ce25e12d;8;No;Brand;googleorganic;Culemborg;00:23:06;60.0;00:00:19;0;1.00
+89a62c9f;(not set);Yes;Brand;direct;Amsterdam;00:21:47;5.6;00:00:06;0;1.00
+75cac715;7;Yes;Brand;googleorganic;Weert;00:21:38;2.8;00:02:27;0;1.50
+a7ba0d92;(not set);Yes;Brand;googleorganic;Bemmel;00:21:31;8.5;00:00:24;0;1.00
+9991c050;10;Yes;Brand;googlecpc;Geleen;00:21:02;4.8;00:11:18;0;1.50
+5ccb0ebd;7;Yes;Brand;googleorganic;(not set);00:19:38;56.0;00:00:37;0;1.50
+faa39dba;10;Yes;Brand;googleorganic;Voorburg;00:18:21;6.0;00:06:09;0;2.67
+8bc636d8;8;Yes;Brand;direct;(not set);00:16:52;59.6;00:01:41;0;4.00
+c59134fc;10;Yes;Brand;bingorganic;Eindhoven;00:16:39;60.7;00:00:21;0;2.50
+08dfe96c;7;No;Brand;googlecpc;Delft;00:15:36;30.0;00:00:09;0;3.33
+f4778250;(not set);Yes;Brand;googlecpc;The Hague;00:15:27;48.8;00:00:04;0;1.50
+87725be9;6;Yes;Brand;googleorganic;Assen;00:14:51;29.0;00:00:36;0;1.00
+3d2f2063;(not set);Yes;Brand;googlecpc;Amsterdam;00:14:33;35.6;00:00:19;0;1.00
+d848298b;8;Yes;Brand;direct;The Hague;00:14:15;71.6;00:00:10;0;1.67
+5be63489;6;Yes;Brand;googleorganic;Heerhugowaard;00:13:51;8.4;00:00:42;0;1.50
+794368d2;7;Yes;Brand;googlecpc;(not set);00:13:44;47.3;00:00:22;0;2.50
+bf3e1c96;8;Yes;Brand;googleorganic;Utrecht;00:13:28;28.0;00:00:11;0;1.50
+28084daa;9;Yes;Brand;googleorganic;Capelle aan den IJssel;00:13:12;37.8;00:00:19;0;1.00
+0E+00;8;No;Brand;direct;(not set);00:12:25;54.0;00:00:10;0;2.50
+3b57c7cb;0;Yes;Brand;googleorganic;Groningen;00:11:52;64.2;00:03:50;0;1.00
+c0e52db9;6;No;Brand;googlecpc;Utrecht;00:11:33;7.8;00:00:44;0;1.50
+a57e55cf;(not set);Yes;Brand;googlecpc;Amsterdam;00:11:10;4.7;00:00:46;0;1.50
+25d17eb0;10;Yes;Brand;googleorganic;The Hague;00:11:08;2.6;00:00:42;0;1.00
+60336076;(not set);Yes;Brand;googlecpc;Wageningen;00:11:04;43.1;00:00:27;0;1.00
+846005d4;(not set);No;Brand;googleorganic;(not set);00:11:01;10.5;00:07:12;0;1.50
+08f320c5;8;Yes;Brand;googlecpc;Winsum;00:10:50;41.5;00:00:08;0;1.50
+399da2b4;5;Yes;Brand;googlecpc;Veldhoven;00:10:48;40.7;00:00:07;0;1.67
+ac1a8fa1;(not set);Yes;Brand;googlecpc;Dordrecht;00:10:13;22.4;00:00:14;0;2.50
+5321dd0b;(not set);Yes;Brand;googlecpc;Amsterdam;00:09:58;32.2;00:00:05;0;1.50
+edbc0d1f;10;Yes;Brand;googlecpc;Zevenbergen;00:09:55;22.5;00:00:48;0;1.50
+f2365651;(not set);Yes;Brand;googlecpc;Hoorn;00:09:17;21.6;00:00:19;0;1.50
+0e4c9d68;(not set);Yes;Brand;googlecpc;Maastricht;00:09:10;69.3;00:00:03;0;1.50
+d43bac96;7;Yes;Brand;googleorganic;Brielle;00:08:59;12.1;00:00:50;0;1.00
+7e5f815d;(not set);No;Brand;googleorganic;Rotterdam;00:08:36;7.4;00:00:04;0;1.00
+872ba39c;(not set);Yes;Brand;googlecpc;Uden;00:08:34;3.4;00:03:07;0;2.50
+325d83ed;8;Yes;Brand;googlecpc;'s-Hertogenbosch;00:08:08;31.4;00:00:46;0;1.00
+5c9b5efd;(not set);Yes;Brand;bingorganic;Groede;00:08:08;57.6;00:00:06;0;1.50
+26f8be88;10;Yes;Brand;googlecpc;Apeldoorn;00:07:49;42.3;00:00:04;0;2.50
+7ad73e9c;9;Yes;Brand;direct;Winschoten;00:07:43;61.7;00:00:03;0;1.50
+8d4c47be;(not set);Yes;Brand;direct;'s-Hertogenbosch;00:07:25;8.4;00:00:39;0;1.50
+07683aea;10;Yes;Brand;googlecpc;Rotterdam;00:07:07;32.6;00:00:34;0;1.50
+aa3723d1;9;Yes;Brand;googleorganic;Amstelveen;00:06:43;31.6;00:00:07;0;1.50
+97127c3e;(not set);Yes;Brand;referral;Amsterdam;00:06:36;23.6;00:00:54;0;2.50
+249b9261;(not set);Yes;Brand;googlecpc;Amersfoort;00:06:10;55.6;00:00:37;0;1.50
+e1299580;7;Yes;Brand;googleorganic;Wormer;00:05:30;4.7;00:00:10;0;1.00
+9a0971ec;(not set);No;Brand;googleorganic;Rhenen;00:05:28;42.6;00:00:28;0;2.50
+6b2d76f3;4;No;Brand;direct;Bovensmilde;00:05:25;41.5;00:00:44;0;1.50
+14c4e5f0;8;Yes;Brand;googlecpc;The Hague;00:05:23;3.6;00:00:49;0;1.50
+40653128;10;Yes;Brand;googlecpc;Amsterdam;00:05:11;64.9;00:01:18;0;2.50
+95808568;(not set);Yes;Brand;googleorganic;Dronrijp;00:04:58;60.4;00:00:15;0;1.50
+2c7a13c8;(not set);No;Brand;googlecpc;Katwijk aan Zee;00:04:57;30.5;00:00:22;0;1.50
+9be9242a;(not set);No;Brand;googlecpc;Amsterdam;00:04:55;60.9;00:00:15;0;1.50
+f33876c3;3;Yes;Brand;googleorganic;Hazerswoude-Dorp;00:04:48;36.5;00:00:10;0;1.50
+a712a28d;10;Yes;Brand;direct;Rotterdam;00:04:48;14.0;00:00:04;0;2.50
+176b128e;(not set);Yes;Brand;googlecpc;Amsterdam;00:04:47;5.3;00:02:54;0;1.50
+5c60034e;7;No;Brand;googleorganic;Nieuw-Vennep;00:04:44;58.0;00:00:24;0;1.50
+d241cc6b;(not set);Yes;Brand;googlecpc;Voorburg;00:04:44;4.5;00:00:21;0;2.50
+9fd94cf8;7;Yes;Brand;googleorganic;Uden;00:04:42;43.0;00:00:04;0;1.50
+5650fcc0;8;Yes;Brand;googleorganic;Apeldoorn;00:04:26;3.2;00:00:04;0;2.50
+ec0ad848;(not set);Yes;Brand;googlecpc;Leiden;00:04:25;5.2;00:00:42;0;2.50
+5116d445;10;Yes;Brand;googlecpc;Capelle aan den IJssel;00:04:17;38.4;00:00:04;0;1.00
+389b16bd;8;Yes;Brand;googleorganic;(not set);00:04:15;54.9;00:00:04;0;1.50
+d5a3244b;(not set);Yes;Brand;googlecpc;Amsterdam;00:04:09;2.4;00:06:37;0;1.26
+3422c9c1;(not set);Yes;Brand;googlecpc;Venray;00:04:09;53.6;00:00:14;0;1.50
+f06dd745;(not set);Yes;Brand;direct;Rotterdam;00:03:54;65.3;00:00:20;0;1.50
+aa728714;(not set);Yes;Brand;googlecpc;Amsterdam;00:03:52;15.3;00:00:16;0;2.50
+d3d8afc4;7;Yes;Brand;googleorganic;Sittard;00:03:51;42.8;00:00:20;0;1.50
+f4ec3022;5;Yes;Brand;googlecpc;Lelystad;00:03:49;5.5;00:01:04;0;1.00
+2b8482a9;(not set);No;Brand;googlecpc;The Hague;00:03:47;39.4;00:00:18;0;1.50
+b3ae2b7c;(not set);Yes;Brand;referral;Alkmaar;00:03:34;26.0;00:00:13;0;1.50
+ebc06505;(not set);Yes;Brand;googlecpc;Nijmegen;00:03:34;2.7;00:01:14;0;1.50
+0eddc46d;10;Yes;Brand;googlecpc;Rotterdam;00:03:25;7.7;00:01:29;0;1.50
+368f03ee;(not set);Yes;Brand;googleorganic;Vlaardingen;00:03:25;42.3;00:00:05;0;1.50
+45f8a90e;10;Yes;Brand;googlecpc;Alkmaar;00:03:23;6.0;00:00:07;0;1.67
+e7a5adde;8;Yes;Brand;duckduckgoorganic;Brussels;00:03:17;46.3;00:00:29;0;2.50
+8ac3de82;6;Yes;Brand;googlecpc;Vianen;00:03:15;2.8;00:00:24;0;1.50
+8eef181a;(not set);Yes;Brand;googlecpc;Nieuwe Pekela;00:03:12;34.6;00:00:13;0;1.50
+98445aba;8;Yes;Brand;googlecpc;Lunteren;00:03:07;27.7;00:00:10;0;1.50
+9fc5dd93;0;No;Brand;googlecpc;Amsterdam;00:03:04;2.9;00:00:06;0;2.50
+31a34866;7;No;Brand;googlecpc;Roermond;00:03:04;33.7;00:01:40;0;1.00
+2043f971;4;No;Brand;googlecpc;Eindhoven;00:02:59;38.2;00:00:25;0;1.00
+d1233b05;9;Yes;Brand;googlecpc;Bergschenhoek;00:02:59;3.1;00:00:27;0;1.50
+902cdc54;7;Yes;Brand;referral;Almere;00:02:58;2.4;00:00:00;0;1.00
+11206d53;5;Yes;Brand;direct;Amsterdam;00:02:57;6.2;00:00:19;0;1.50
+f8b79460;8;No;Brand;googleorganic;Druten;00:02:49;7.6;00:00:22;0;1.50
+1c81f95b;7;Yes;Brand;googlecpc;Oss;00:02:47;30.8;00:00:03;0;1.00
+82ee9f85;(not set);Yes;Brand;googlecpc;Nijmegen;00:02:44;19.5;00:00:15;0;1.50
+e6505f61;5;Yes;Brand;googlecpc;Almere;00:02:40;3.5;00:00:34;0;1.50
+bf8e6b8b;(not set);No;Brand;googleorganic;Kollum;00:02:39;6.6;00:00:14;0;1.50
+4b4806f1;(not set);Yes;Brand;direct;Oostkamp;00:02:37;54.3;00:00:17;0;1.50
+cf58e1c5;4;Yes;Brand;googlecpc;Rotterdam;00:02:37;20.5;00:00:04;0;2.50
+3e070f8f;7;Yes;Brand;bingorganic;Wehl;00:02:36;11.4;00:00:04;0;1.00
+15c505a1;5;Yes;Brand;googlecpc;Nijverdal;00:02:35;2.8;00:00:30;0;1.50
+02ab201d;7;Yes;Brand;googlecpc;Rotterdam;00:02:33;55.2;00:00:42;0;1.50
+a55e6ab4;(not set);No;Brand;googleorganic;Utrecht;00:02:32;36.7;00:00:18;0;2.50
+65243e3c;7;Yes;Brand;googlecpc;Amsterdam;00:02:30;13.0;00:00:11;0;2.50
+3cc1d9e3;10;Yes;Brand;googlecpc;Utrecht;00:02:27;4.7;00:00:35;0;2.50
+5f3d95ea;10;No;Brand;googlecpc;The Hague;00:02:20;22.7;00:00:04;0;1.50
+e2f3812d;(not set);Yes;Brand;direct;Amersfoort;00:02:20;6.1;00:00:10;0;1.50
+4f9029c2;4;No;Brand;googlecpc;Heemstede;00:02:19;7.0;00:00:20;0;2.00
+41f6a0f0;(not set);Yes;Brand;googlecpc;Leiden;00:02:17;29.4;00:00:19;0;1.00
+028bbf9e;(not set);Yes;Brand;googleorganic;Arnhem;00:02:12;5.3;00:00:42;0;1.50
+2aeee58d;(not set);Yes;Brand;googlecpc;Utrecht;00:02:09;7.4;00:00:23;0;1.00
+fb49fb39;(not set);Yes;Brand;googlecpc;Gouda;00:02:09;19.6;00:00:14;0;1.00
+3dcaeae4;(not set);Yes;Brand;googleorganic;Eerbeek;00:02:08;7.6;00:00:20;0;2.50
+e7e347c9;(not set);Yes;Brand;googlecpc;Amsterdam;00:02:08;41.3;00:00:16;0;3.00
+8c1129f8;(not set);Yes;Brand;googlecpc;Bilthoven;00:02:07;6.6;00:00:08;0;1.50
+d4312a1b;(not set);Yes;Brand;googlecpc;Oud-Beijerland;00:02:06;3.9;00:00:07;0;1.67
+3438d85b;(not set);Yes;Brand;googlecpc;Barendrecht;00:02:04;3.4;00:00:14;0;1.50
+626df7d1;(not set);Yes;Brand;googlecpc;The Hague;00:02:04;5.9;00:00:54;0;1.50
+ea913ae4;5;Yes;Brand;googlecpc;Maarssen;00:02:03;27.7;00:00:14;0;1.50
+1da13595;(not set);Yes;Brand;googlecpc;Amsterdam;00:02:02;9.6;00:00:03;0;1.50
+76a37b38;9;Yes;Brand;googleorganic;Helmond;00:02:01;3.6;00:00:06;0;1.00
+df924862;(not set);No;Brand;googleorganic;Son Tay;00:02:01;9.6;00:00:06;0;1.50
+55290aab;(not set);Yes;Brand;bingorganic;Garderen;00:01:59;4.6;00:00:16;0;1.50
+0777075f;9;Yes;Brand;googlecpc;(not set);00:01:58;3.4;00:00:46;0;2.50
+9e049960;8;No;Brand;googleorganic;Leiden;00:01:57;33.1;00:00:22;0;1.50
+751f45b5;10;Yes;Brand;googlecpc;Zwolle;00:01:55;5.9;00:00:04;0;1.00
+2fcaa529;(not set);Yes;Brand;googleorganic;Harderwijk;00:01:54;4.0;00:00:46;0;3.00
+b7d8d52a;(not set);Yes;Brand;googlecpc;Rotterdam;00:01:52;2.3;00:00:34;0;2.50
+494beb5c;8;Yes;Brand;googleorganic;Tilburg;00:01:51;9.6;00:00:08;0;1.50
+af45a74d;8;Yes;Brand;direct;Amsterdam;00:01:45;5.5;00:00:05;0;3.00
+7dc359b8;(not set);Yes;Brand;googleorganic;Rijen;00:01:44;3.7;00:00:18;0;1.00
+6eff8e1d;(not set);No;Brand;googlecpc;Zaandam;00:01:43;3.5;00:00:18;0;1.50
+7c4873b4;(not set);Yes;Brand;googlecpc;Amsterdam;00:01:43;3.3;00:00:29;0;1.50
+c24ec9be;8;Yes;Brand;googlecpc;Sprang-Capelle;00:01:41;3.1;00:00:51;0;1.50
+9ad76cfe;(not set);Yes;Brand;direct;Paramaribo;00:01:40;5.2;00:00:11;0;1.00
+0ad831de;8;Yes;Brand;googleorganic;Apeldoorn;00:01:37;5.8;00:00:32;0;1.50
+f75f1d2a;7;No;Brand;direct;The Hague;00:01:37;5.2;00:00:07;0;1.50
+5e23cdfb;8;Yes;Brand;googleorganic;Bergen op Zoom;00:01:33;27.0;00:00:21;0;2.50
+1e35f0d5;(not set);Yes;Brand;googlecpc;Amsterdam;00:01:31;2.9;00:00:10;0;2.50
+e41ea67d;(not set);Yes;Brand;googlecpc;Wageningen;00:01:29;13.6;00:00:08;0;1.00
+6703870c;(not set);Yes;Brand;googlecpc;Rotterdam;00:01:27;2.4;00:00:16;0;1.50
+20b1b849;10;Yes;Brand;googleorganic;Nieuw-Vennep;00:01:21;1.7;00:01:02;0;2.50
+40b86ff9;(not set);Yes;Brand;googlecpc;Amersfoort;00:01:17;3.3;00:00:22;0;1.00
+8cffc816;(not set);Yes;Brand;googlecpc;Veldhoven;00:01:16;2.6;00:00:19;0;3.00
+f7fed676;8;No;Brand;googlecpc;Amstelveen;00:01:14;19.0;00:00:16;0;1.50
+425d7cfd;(not set);Yes;Brand;googlecpc;Brielle;00:01:11;19.9;00:00:17;0;4.00
+679d4269;(not set);Yes;Brand;googlecpc;(not set);00:01:10;4.1;00:00:11;0;1.50
+de131335;(not set);No;Brand;googlecpc;Capelle aan den IJssel;00:01:04;4.5;00:00:12;0;5.00
+bdb1de64;10;No;Brand;googlecpc;Utrecht;00:01:01;1.9;00:00:37;0;1.50
+b3bfee81;8;Yes;Brand;googlecpc;Utrecht;00:01:00;3.7;00:00:18;0;2.50
+08806acf;(not set);Yes;Brand;bingorganic;Dokkum;00:00:59;3.0;00:00:29;0;2.50
+4a85efd4;7;No;Brand;googleorganic;Amsterdam;00:00:55;11.6;00:00:03;0;1.00
+5b793efa;(not set);No;Brand;referral;Capelle aan den IJssel;00:00:55;3.0;00:00:24;0;1.50
+f6c73a84;(not set);Yes;Brand;googlecpc;Woerden;00:00:52;3.2;00:00:18;0;3.00
+67008d91;7;Yes;Brand;googlecpc;Amsterdam;00:00:50;2.8;00:00:21;0;2.50
+6c4e5a0a;6;Yes;Brand;googlecpc;Amsterdam;00:00:50;4.5;00:00:36;0;1.00
+bbae6009;6;Yes;Brand;googlecpc;Geldermalsen;00:00:50;1.6;00:01:40;0;1.50
+b1f4e15e;1;No;Brand;googlecpc;Hilversum;00:00:49;2.7;00:00:30;0;1.50
+6360b7f0;(not set);Yes;Brand;googlecpc;Amsterdam;00:00:44;2.4;00:00:23;0;1.50
+3967f994;7;No;Brand;googlecpc;'s-Hertogenbosch;00:00:42;1.2;00:01:23;0;1.50
+aab0f68b;8;No;Brand;googlecpc;Rotterdam;00:00:42;4.2;00:00:20;0;1.50
+f2a3854f;7;Yes;Brand;googlecpc;Groningen;00:00:41;2.5;00:00:06;0;2.50
+54f03a10;(not set);Yes;Brand;googlecpc;Eindhoven;00:00:40;1.2;00:01:21;0;1.50
+f90505f7;7;Yes;Brand;direct;Beesd;00:00:39;3.3;00:00:26;0;1.50
+54e782f8;(not set);Yes;Brand;direct;Dordrecht;00:00:36;4.5;00:00:07;0;1.00
+cd225795;7;Yes;Brand;googlecpc;Sint-Michielsgestel;00:00:35;2.2;00:00:23;0;1.50
+0d4a2652;(not set);Yes;Brand;googlecpc;Bergen op Zoom;00:00:34;1.2;00:01:08;0;1.50
+a57b8cda;(not set);Yes;Brand;googlecpc;Tilburg;00:00:30;4.0;00:00:04;0;2.50
+70983748;(not set);No;Brand;googlecpc;Sommelsdijk;00:00:26;2.7;00:00:18;0;1.50
+b250f524;(not set);Yes;Brand;googlecpc;Leeuwarden;00:00:26;2.5;00:00:16;0;1.50
+e86fe0f5;(not set);No;Brand;googlecpc;Maarheeze;00:00:20;1.1;00:00:41;0;1.50
+b86b4a84;(not set);Yes;Brand;googlecpc;Amsterdam;00:00:19;3.6;00:00:19;0;1.00
+b6a19874;7;Yes;Brand;googlecpc;Hoorn;00:00:18;2.2;00:00:11;0;1.50
+5b1d80d9;(not set);Yes;Brand;direct;Hengelo;00:00:16;3.5;00:00:11;0;1.50
+ac2591c0;(not set);Yes;Brand;googlecpc;Groessen;00:00:15;3.4;00:00:10;0;1.50
+f12cc0c8;5;No;Brand;googlecpc;Amsterdam;00:00:11;2.3;00:00:07;0;2.50
+ed214afe;(not set);Yes;Brand;googleorganic;Best;00:00:09;2.5;00:00:06;0;1.50
+1d8c7797;8;No;Brand;googleorganic;Utrecht;00:00:05;1.3;00:00:10;0;1.50
+f403c5db;(not set);Yes;Brand;googlecpc;Hoogvliet Rotterdam;00:00:04;1.2;00:00:08;0;1.50
+0c36e508;10;Yes;Brand;direct;Lichtenvoorde;00:00:03;2.2;00:00:06;0;1.50
+9fa0beca;(not set);No;Brand;direct;Alkmaar;00:00:02;7.9;00:00:03;0;1.67
+2645c849;(not set);Yes;Brand;googlecpc;Holten;00:00:00;1.8;00:00:00;0;1.00
+ae85a55f;(not set);Yes;Brand;googlecpc;Capelle aan den IJssel;00:00:00;2.1;00:00:00;0;1.00
+e0c3b524;(not set);No;Brand;googlecpc;(not set);00:00:00;1.2;00:00:00;0;1.00
+d3c5b13e;7;Yes;Brand;googlecpc;Voorschoten;00:08:02;2.7;00:00:13;0;1.00
+dfdc9c1c;(not set);Yes;Brand;googlecpc;Almere;00:01:45;9.5;00:00:06;0;1.50
+6afc79eb;10;Yes;Brand;googleorganic;Deventer;00:03:06;8.3;00:00:16;0;1.50
+f28b99fc;8;Yes;Brand;googlecpc;Rotterdam;00:11:57;11.2;00:00:11;0;1.50
+b59dd9ac;(not set);Yes;Brand;googlecpc;Lemmer;00:05:20;37.7;00:00:11;0;1.00
+c7ecd45f;6;Yes;Brand;googlecpc;Amsterdam;00:03:09;3.7;00:00:15;0;1.50
+e65cbfe5;8;Yes;Brand;googlecpc;Lelystad;00:01:24;1.5;00:02:47;0;1.50
+03594ffd;(not set);Yes;Brand;googlecpc;Oostvoorne;00:13:36;36.3;00:01:32;0;1.50
+b1ac84f8;(not set);Yes;Brand;googlecpc;Amsterdam;00:05:18;65.8;00:00:07;0;2.50
+d0287cb7;(not set);Yes;Brand;googlecpc;Emmen;00:00:59;2.8;00:00:23;0;1.00
+aebb9118;8;Yes;Brand;googlecpc;Rotterdam;00:00:00;1.4;00:00:00;0;1.00
+a21628a9;(not set);Yes;Brand;googlecpc;Venlo;00:14:29;2.3;00:00:10;0;1.50
+4c422096;(not set);Yes;Brand;googlecpc;Amsterdam;00:14:12;4.0;00:00:20;0;1.50
+c41b2349;(not set);Yes;Brand;googlecpc;Terneuzen;00:12:15;44.9;00:00:16;0;1.00
+0425015b;9;Yes;Brand;googlecpc;Hendrik-Ido-Ambacht;00:09:28;22.8;00:00:22;0;1.50
+49a12390;(not set);Yes;Brand;googlecpc;Steenwijk;00:07:19;61.6;00:00:16;0;1.50
+053b8097;8;Yes;Brand;googlecpc;Amsterdam;00:06:56;2.9;00:00:39;0;1.50
+7cf48e03;9;Yes;Brand;googlecpc;Nieuwegein;00:03:55;10.6;00:00:18;0;2.50
+d3c4e3ec;7;Yes;Brand;googlecpc;Assen;00:03:26;36.1;00:00:15;0;1.00
+6df974c8;(not set);Yes;Brand;referral;Barendrecht;00:02:42;60.3;00:00:05;0;1.00
+736f6ab0;5;No;Brand;googlecpc;Zaandam;00:02:36;24.5;00:00:12;0;1.50
+c035a2c0;8;Yes;Brand;googlecpc;Almelo;00:02:02;10.8;00:00:21;0;1.50
+7a44b824;(not set);Yes;Brand;googlecpc;Rotterdam;00:01:56;19.9;00:00:10;0;1.00
+d9f85109;(not set);No;Brand;googlecpc;Utrecht;00:01:15;2.4;00:00:03;0;1.50
+02c6c4e2;(not set);Yes;Brand;googlecpc;Joure;00:00:38;1.5;00:01:15;0;1.50
+f2e5509d;(not set);Yes;Brand;googlecpc;Eindhoven;00:00:38;1.4;00:00:25;0;1.50
+bd196a37;10;Yes;Brand;googlecpc;Breda;00:00:10;1.4;00:00:10;0;1.00
+9076b7d1;7;Yes;Brand;googlecpc;Leidschendam;00:00:04;2.7;00:00:08;0;1.50
+88c05df0;(not set);Yes;Brand;googlecpc;Amersfoort;00:00:03;1.2;00:00:06;0;1.50
+4331570b;5;Yes;Brand;googlecpc;Waalre;00:00:03;1.7;00:00:05;0;1.50
+a814dc70;(not set);Yes;Brand;googlecpc;Apeldoorn;00:00:03;1.1;00:00:05;0;1.50
+bff14350;9;Yes;Brand;googlecpc;Bosch en Duin;00:07:50;8.8;00:00:24;0;2.50
+f459e7f5;(not set);Yes;Brand;googlecpc;Didam;00:05:43;36.4;00:01:34;0;1.00
+ead4254e;8;Yes;Brand;googlecpc;Wognum;00:02:26;5.0;00:00:19;0;1.50
+034cc8aa;6;No;Brand;googlecpc;Utrecht;00:01:13;3.5;00:00:30;0;1.50
+2e21a213;10;Yes;Brand;googlecpc;Haarlem;00:00:38;1.8;00:00:06;0;1.50
+62837012;8;Yes;Brand;googleorganic;Amsterdam;00:15:13;6.2;00:14:15;0;1.00
+c4ef1bc1;8;Yes;Brand;googlecpc;Amsterdam;00:10:52;4.9;00:01:27;0;1.00
+92b52475;6;No;Brand;googleorganic;Voorburg;00:06:48;12.1;00:01:50;0;1.50
+eca2be7f;8;No;Brand;bingorganic;Amersfoort;00:01:19;5.6;00:00:05;0;1.50
+5cda87a4;(not set);Yes;Product;googleorganic;Groningen;00:37:01;15.1;00:08:36;0;1.00
+a070a0e1;(not set);Yes;Product;googlecpc;Utrecht;00:24:19;6.3;00:04:50;0;5.00
+4d02b0c0;9;Yes;Product;googleorganic;Alphen aan den Rijn;00:24:16;20.7;00:00:28;0;5.00
+9e40bab7;8;Yes;Product;googlecpc;Nijmegen;00:19:50;38.7;00:00:51;0;1.50
+1d7737e7;6;No;Product;googlecpc;Oploo;00:13:53;43.8;00:00:08;0;1.50
+e433b33b;8;Yes;Product;googlecpc;Zwolle;00:13:41;28.4;00:00:40;0;1.50
+0e949ef6;7;No;Product;bingorganic;Deventer;00:08:02;5.0;00:00:04;0;1.50
+fb991eb9;5;Yes;Product;googleorganic;Cuijk;00:06:49;6.1;00:00:23;0;1.00
+377deb3d;9;No;Product;bingorganic;Helmond;00:06:03;19.8;00:00:59;0;5.00
+7052132d;(not set);Yes;Product;googleorganic;Enschede;00:04:45;4.4;00:00:25;0;2.50
+0c93388f;5;Yes;Product;bingorganic;Kruibeke;00:04:30;33.5;00:00:25;0;2.50
+de7d9c46;6;Yes;Product;googlecpc;Oss;00:03:42;4.7;00:00:03;0;1.00
+dc5115e7;(not set);No;Product;googlecpc;Houten;00:03:24;22.5;00:00:17;0;2.50
+5f7740f3;7;No;Product;googleorganic;Hilversum;00:03:16;3.4;00:02:11;0;1.50
+214905ef;6;No;Product;googlecpc;Bergen op Zoom;00:02:54;7.9;00:00:19;0;2.50
+a6c7c421;3;Yes;Product;googleorganic;Waalwijk;00:02:46;4.4;00:00:55;0;1.50
+55765f66;9;Yes;Product;referral;Schoorl;00:02:40;13.1;00:00:54;0;1.50
+f4e33f79;8;Yes;Product;googlecpc;Julianadorp;00:02:36;7.5;00:01:06;0;1.00
+d3187c9a;(not set);Yes;Product;googleorganic;Kruibeke;00:02:32;6.0;00:01:19;0;2.50
+ea07829a;8;No;Product;googlecpc;The Hague;00:02:32;30.7;00:00:03;0;1.00
+8dd0ea08;8;No;Product;googlecpc;Emmen;00:02:31;10.0;00:00:32;0;1.50
+950d71a1;6;Yes;Product;googleorganic;Julianadorp;00:02:20;5.1;00:00:56;0;2.50
+cc84b30a;8;Yes;Product;googlecpc;Wijk bij Duurstede;00:02:17;24.1;00:00:19;0;1.00
+768ef633;7;Yes;Product;googlecpc;Haarlem;00:02:15;4.2;00:02:01;0;1.00
+4c92d29a;1;No;Product;googleorganic;Paramaribo;00:02:03;3.1;00:00:16;0;3.00
+bc7fc4f4;0;No;Product;googlecpc;Alkmaar;00:02:00;3.8;00:01:06;0;1.50
+6d67eecf;5;No;Product;googlecpc;Zaandam;00:02:00;7.7;00:00:41;0;2.50
+6ecdab70;8;No;Product;duckduckgoorganic;Haarlem;00:01:59;3.1;00:00:36;0;3.00
+2f2709dc;(not set);Yes;Product;googlecpc;Eindhoven;00:01:38;9.9;00:00:12;0;2.50
+9111e966;(not set);Yes;Product;googlecpc;Eindhoven;00:01:36;2.6;00:00:46;0;1.50
+eb4e3aed;7;Yes;Product;googleorganic;Paramaribo;00:01:15;1.2;00:02:30;0;1.50
+0d2d9929;(not set);Yes;Product;referral;Noordeloos;00:01:06;2.8;00:00:28;0;1.50
+62bdd283;8;Yes;Product;googleorganic;Eindhoven;00:00:54;3.9;00:00:13;0;1.50
+f1a8bf11;(not set);Yes;Product;bingorganic;Steenwijk;00:00:50;1.7;00:01:40;0;1.50
+75125269;(not set);Yes;Product;googlecpc;Almere;00:00:42;1.6;00:00:42;0;1.00
+8e3aa95e;9;Yes;Product;googlecpc;Arnhem;00:00:39;1.8;00:00:25;0;1.50
+b0f2b5d5;5;No;Product;googleorganic;Amsterdam;00:00:35;4.9;00:00:21;0;2.50
+5115353;(not set);Yes;Product;googlecpc;Amsterdam;00:00:34;2.2;00:01:08;0;1.50
+08f551bb;7;Yes;Product;googlecpc;Monnickendam;00:00:31;3.4;00:00:00;0;0.00
+aa0c96e4;(not set);Yes;Product;bingorganic;'s-Hertogenbosch;00:00:19;1.3;00:00:37;0;1.50
+cc4d4643;(not set);Yes;Product;googleorganic;Brussels;00:00:11;1.3;00:00:22;0;1.50
+d5158b18;(not set);Yes;Product;bingorganic;Leersum;00:00:07;2.0;00:00:14;0;1.50
+4d0cecc9;7;Yes;Product;bingorganic;Amsterdam;00:00:06;3.8;00:00:11;0;1.50
+2e18275d;7;Yes;Product;googleorganic;Maastricht;00:00:04;1.3;00:00:08;0;1.50
+281bf70a;(not set);Yes;Product;googlecpc;Purmerend;00:00:03;1.2;00:00:06;0;1.50
+68b2354c;7;No;Product;direct;Rotterdam;00:00:03;1.6;00:00:06;0;1.50
+646ad65f;6;Yes;Product;googlecpc;Delft;00:00:00;1.2;00:00:00;0;1.00
+8249ac8e;8;Yes;Product;direct;Paramaribo;00:00:00;1.6;00:00:00;0;1.00
+e0b3ac4a;(not set);Yes;Product;direct;Paramaribo;00:00:00;1.3;00:00:00;0;1.00
+e552d938;8;No;Product;googlecpc;Leiden;00:00:00;1.2;00:00:00;0;1.00
+006b1483;4;No;Product;googleorganic;Amstelveen;00:07:52;59.9;00:00:21;0;1.50
+04640af7;8;No;Product;googleorganic;Veenendaal;00:00:00;1.6;00:00:00;0;1.00
+686a0624;(not set);Yes;Product;youtubecpm;Etten-Leur;00:09:36;39.2;00:00:17;0;2.50
+00a5c05c;10;Yes;Product;googlecpc;Nieuwegein;00:07:42;4.6;00:01:16;0;1.50
+0f97fa9e;7;Yes;Product;googlecpc;(not set);00:07:04;2.8;00:01:02;0;1.50
+c1e8a2c7;7;Yes;Product;googlecpc;Nieuwegein;00:05:49;36.5;00:00:07;0;1.00
+a7e84f73;(not set);Yes;Product;googlecpc;Rijen;00:03:12;4.5;00:00:10;0;1.50
+67685a3c;(not set);Yes;Product;googlecpc;Dronrijp;00:02:39;8.5;00:00:12;0;1.50
+88a997ac;7;Yes;Product;facebookcpm;Heerenveen;00:02:37;2.5;00:00:20;0;2.50
+de13c42f;10;No;Product;googlecpc;(not set);00:02:33;52.8;00:00:03;0;1.50
+5d380d1e;(not set);Yes;Product;facebookcpm;Rozenburg;00:02:28;2.4;00:00:10;0;1.50
+374823cf;(not set);Yes;Product;googlecpc;'s-Hertogenbosch;00:01:57;8.2;00:00:11;0;1.50
+bfb840d5;(not set);Yes;Product;googlecpc;Diemen;00:01:49;2.5;00:00:05;0;1.00
+42789b4d;(not set);Yes;Product;googleorganic;Son;00:01:39;2.8;00:00:49;0;1.50
+a048ed86;8;Yes;Product;facebookcpm;(not set);00:00:32;3.1;00:00:06;0;1.50
+80cc816d;(not set);Yes;Product;googlecpc;Delft;00:00:08;1.6;00:00:05;0;1.00
+ed6da4d1;6;Yes;Product;googleorganic;Hengelo;00:00:00;1.3;00:00:00;0;1.00
+d887b220;5;Yes;Product;googleorganic;The Hague;00:07:48;52.7;00:00:07;0;1.00
+562da3cf;7;Yes;Product;googleorganic;Rotterdam;00:02:32;7.1;00:00:23;0;1.00
+1b954f6f;(not set);Yes;Product;googleorganic;Cuijk;00:00:49;3.0;00:00:17;0;1.50
+458e959a;9;Yes;Product;cpcfacebook;Hoogvliet Rotterdam;00:21:56;43.4;00:01:22;0;1.50
+ac56b088;(not set);Yes;Product;cpcfacebook;Amsterdam;00:06:36;13.8;00:01:17;0;1.00
+b1b1340f;7;Yes;Product;cpcfacebook;Enschede;00:02:31;5.8;00:01:02;0;1.00
+b5f4c842;8;Yes;Brand;googleorganic;Sneek;00:31:35;36.2;00:08:22;0;1.00
+7b99470d;7;No;Brand;googlecpc;Haaksbergen;00:30:57;26.8;00:00:06;0;2.50
+8096510a;8;Yes;Brand;duckduckgoorganic;Bilthoven;00:20:06;43.9;00:00:06;0;1.50
+4e49e9b8;(not set);Yes;Brand;googleorganic;Berghem;00:18:03;23.1;00:03:32;0;1.67
+5353ee9c;(not set);Yes;Brand;referral;Lier;00:17:57;5.3;00:00:03;0;1.00
+632503c1;(not set);Yes;Brand;googlecpc;Zoetermeer;00:11:21;25.1;00:00:35;0;2.50
+1bc04b9d;10;Yes;Brand;referral;Haarlem;00:09:38;27.5;00:00:07;0;1.50
+45f31655;7;Yes;Brand;yahooorganic;(not set);00:09:38;32.8;00:00:04;0;2.60
+0e2159c8;8;Yes;Brand;googlecpc;Goes;00:09:23;5.2;00:00:06;0;1.00
+b264ff0b;5;No;Brand;googlecpc;Leek;00:07:17;38.5;00:00:33;0;1.50
+3407c93f;(not set);Yes;Brand;googlecpc;Helmond;00:06:44;20.8;00:00:14;0;1.50
+0a6dae9c;(not set);Yes;Brand;bingorganic;Uithoorn;00:05:24;56.1;00:00:05;0;1.50
+9da15326;8;No;Brand;googlecpc;Zwolle;00:05:12;6.1;00:00:23;0;1.00
+95b526bd;7;Yes;Brand;googlecpc;Arnhem;00:05:05;26.2;00:00:07;0;1.00
+8f815097;10;Yes;Brand;googleorganic;Bergschenhoek;00:04:10;37.6;00:00:16;0;1.50
+8610a8d5;5;No;Brand;googlecpc;Leek;00:03:53;8.0;00:00:07;0;1.50
+9f085061;10;Yes;Brand;googlecpc;Amsterdam;00:03:48;21.6;00:00:07;0;1.00
+d9307413;7;Yes;Brand;googlecpc;Klundert;00:03:16;5.9;00:00:09;0;1.50
+1ea03da0;0;No;Brand;googlecpc;Breda;00:03:13;6.0;00:00:05;0;1.50
+fc6ee83f;8;Yes;Brand;googlecpc;Goes;00:03:09;5.4;00:00:07;0;1.50
+e5ba237b;7;Yes;Brand;googlecpc;Woerden;00:02:58;4.3;00:00:04;0;1.00
+6183ff6b;8;Yes;Brand;googlecpc;Hoogerheide;00:02:37;6.3;00:00:11;0;1.50
+1351f27b;8;Yes;Brand;googlecpc;Oudewater;00:02:25;4.3;00:00:05;0;1.50
+ce61d364;2;No;Brand;googlecpc;Houten;00:02:12;2.5;00:00:05;0;1.50
+bc9264d4;(not set);No;Brand;googlecpc;Antwerp;00:01:41;5.4;00:00:05;0;1.50
+62698073;(not set);Yes;Brand;googleorganic;Groningen;00:01:29;3.4;00:00:06;0;1.00
+d10fd40e;(not set);Yes;Brand;googleorganic;Stadskanaal;00:01:23;5.2;00:00:05;0;1.00
+cc2dcfb3;9;Yes;Brand;googlecpc;Sint-Michielsgestel;00:01:20;1.8;00:00:03;0;1.00
+b337011f;(not set);Yes;Brand;googlecpc;Utrecht;00:01:13;2.3;00:00:07;0;1.50
+86707a18;(not set);Yes;Brand;googlecpc;Aalsmeer;00:01:06;2.3;00:00:11;0;1.00
+c22621da;(not set);Yes;Brand;googlecpc;Enkhuizen;00:01:06;3.6;00:00:06;0;3.00
+c7bad9bd;(not set);Yes;Brand;googlecpc;Oosterhout;00:00:49;5.4;00:00:04;0;1.50
+989de7ba;(not set);Yes;Brand;googlecpc;Utrecht;00:00:47;5.3;00:00:05;0;1.00
+a38a05c2;8;Yes;Brand;googleorganic;Rozenburg;00:00:46;3.7;00:00:03;0;1.00
+fc527900;7;Yes;Brand;googlecpc;Amsterdam;00:00:40;2.6;00:00:09;0;1.00
+497bb1c6;(not set);Yes;Brand;googleorganic;Amsterdam;00:00:39;7.4;00:00:03;0;1.50
+c5a9fbd0;8;No;Brand;googlecpc;Apeldoorn;00:00:15;2.0;00:00:03;0;1.50
+8dbbcfd5;6;No;Brand;googlecpc;Zwolle;00:00:03;1.1;00:00:06;0;1.50
+8479197e;(not set);No;Brand;googleorganic;Utrecht;00:01:33;3.7;00:00:14;0;1.50
+9d311278;6;Yes;Brand;googlecpc;Hoorn;00:00:54;2.5;00:00:14;0;1.00
+b4986053;(not set);Yes;Brand;googleorganic;Moerdijk;00:10:50;3.9;00:05:44;0;1.50
+bc82b7f8;8;Yes;Brand;googleorganic;Doetinchem;00:08:44;2.0;00:08:24;0;1.60
+57fb4889;7;Yes;Brand;googlecpc;Nijmegen;00:06:31;40.3;00:01:44;0;1.00
+f1522808;(not set);Yes;Brand;googlecpc;Lekkerkerk;00:02:48;4.9;00:04:47;0;1.00
+b3042a6f;(not set);Yes;Brand;googleorganic;Berlicum;00:02:40;3.8;00:00:03;0;1.00
+2284921d;7;No;Brand;googleorganic;Schiedam;00:02:00;4.5;00:00:13;0;2.50
+ae953eae;8;Yes;Brand;googleorganic;Nieuwegein;00:00:52;1.6;00:00:00;0;1.00
+8cdcda6f;(not set);No;Brand;googleorganic;Pijnacker;00:07:40;4.3;00:02:49;0;1.50
+38799bcd;9;Yes;Brand;googleorganic;Leerdam;00:20:16;15.9;00:00:19;0;1.00
+e837a077;8;Yes;Brand;googlecpc;Waalwijk;00:11:59;42.9;00:00:36;0;1.50
+11dea419;8;Yes;Brand;googlecpc;Rotterdam;00:07:51;10.9;00:00:30;0;1.50
+6e1db786;(not set);Yes;Brand;googlecpc;Amsterdam;00:07:25;3.8;00:14:50;0;1.50
+8f43fb6e;8;No;Brand;googlecpc;'s-Hertogenbosch;00:05:42;4.0;00:00:48;0;2.50
+9f372268;(not set);Yes;Brand;googleorganic;Rotterdam;00:04:33;13.0;00:00:09;0;1.00
+16ae2bc3;7;No;Brand;googlecpc;Oss;00:03:42;8.5;00:01:01;0;2.00
+369590ec;6;Yes;Brand;googlecpc;Emmeloord;00:03:01;1.5;00:01:17;0;1.00
+1b554168;(not set);Yes;Brand;googlecpc;Rotterdam;00:00:51;3.0;00:00:09;0;4.33
+159ca9fe;(not set);Yes;Brand;googlecpc;Lelystad;00:00:00;1.4;00:00:00;0;1.00
+92bc4a1e;(not set);No;Brand;googleorganic;Arnhem;00:00:34;4.8;00:00:03;0;1.00
+4b8d8d9b;5;Yes;Brand;googlecpc;Heemskerk;00:03:10;4.2;00:00:18;0;2.50
+74928cbd;8;Yes;Brand;googleorganic;Dordrecht;00:02:42;63.8;00:00:04;0;1.50
+5a7a38a8;7;Yes;Brand;googlecpc;Maastricht;00:02:00;3.0;00:00:08;0;1.50
+720c014f;(not set);Yes;Brand;googlecpc;Amsterdam;00:00:50;1.5;00:00:50;0;1.00
+80949837;6;No;Brand;exm;Zutphen;00:02:32;62.0;00:01:29;0;1.50
+26d6b130;8;Yes;Brand;googleorganic;Zoetermeer;00:14:37;4.9;00:00:50;0;1.50
+98287245;(not set);Yes;Brand;googleorganic;Noordwijk;00:02:03;3.4;00:00:14;0;1.50
+adc64476;7;Yes;Brand;googleorganic;Reeuwijk;00:09:50;9.3;00:00:14;0;4.00
+890afd2a;(not set);No;Brand;googleorganic;Halsteren;00:02:05;21.4;00:00:04;0;1.50
+cbfa8dfd;8;Yes;Brand;googlecpc;Hardinxveld-Giessendam;00:02:32;5.5;00:00:24;0;1.00
+942e39d0;8;Yes;Brand;bingorganic;Laren;00:02:02;16.9;00:00:03;0;1.00
+b3e14915;7;Yes;Brand;googleorganic;Huizen;00:01:51;3.1;00:00:04;0;1.50
+6f22625d;6;No;Brand;direct;(not set);00:03:30;43.8;00:00:02;0;1.50
+4082d4cf;8;Yes;Brand;googleorganic;Tilburg;00:00:19;2.8;00:00:12;0;1.50
+4547a88e;(not set);Yes;Brand;googleorganic;Paramaribo;00:00:05;1.4;00:00:10;0;1.50
+fa4e9b7b;7;Yes;Brand;googleorganic;Oostzaan;00:13:58;5.6;00:00:23;0;1.00
+71d356f6;(not set);No;Brand;referral;Bunnik;00:08:31;27.2;00:02:07;0;1.50
+777b1023;(not set);Yes;Brand;exm;Amsterdam;00:03:00;26.4;00:00:07;0;1.00
+2555fb59;(not set);Yes;Brand;googleorganic;Bunschoten-Spakenburg;00:00:08;1.2;00:00:14;0;1.50
+3d5a5612;0;No;Brand;googleorganic;Zeist;00:02:59;2.7;00:02:59;0;1.00
+2dc539c8;7;Yes;Blog;googlecpc;Biddinghuizen;00:16:50;2.0;00:11:14;0;2.50
+e6b696fd;(not set);Yes;Blog;googleorganic;Hardinxveld-Giessendam;00:00:00;1.7;00:00:00;0;1.00
+c37de2f0;(not set);Yes;Blog;referral;Amsterdam;00:18:50;26.2;00:00:06;0;1.50
+e0a845e4;(not set);Yes;Blog;direct;Voerendaal;00:12:02;14.0;00:00:09;0;1.50
+bcf38681;7;Yes;Blog;referral;Amsterdam;00:08:49;35.8;00:00:10;0;1.50
+d47a2f83;(not set);Yes;Blog;direct;Voorhout;00:05:51;34.1;00:00:07;0;1.50
+0348dce2;(not set);Yes;Blog;referral;Zoetermeer;00:05:06;10.5;00:00:08;0;1.00
+d9b1fb3f;10;No;Blog;direct;Zoetermeer;00:04:52;67.6;00:00:09;0;1.50
+d2b476c0;7;Yes;Blog;direct;Spijkenisse;00:03:34;65.7;00:00:08;0;1.50
+c819694b;(not set);Yes;Blog;direct;Almelo;00:03:12;59.1;00:00:07;0;1.50
+f428eee8;(not set);Yes;Blog;direct;Culemborg;00:02:35;65.6;00:00:09;0;1.50
+8cd86be2;(not set);Yes;Blog;googleorganic;Sint-Niklaas;00:12:08;57.5;00:00:32;0;1.50
+d9013c48;(not set);No;Blog;referral;Made;00:02:59;8.7;00:00:14;0;1.50
+221f6cfc;7;Yes;Blog;googleorganic;Oosterwolde;00:02:08;4.4;00:02:08;0;1.00
+c2cb94a1;9;Yes;Blog;referral;Made;00:00:00;1.5;00:00:00;0;1.00
+6e29a04d;10;Yes;Blog;googleorganic;Amsterdam;00:24:12;1.7;00:48:23;0;1.50
+cd73098c;8;Yes;Blog;googleorganic;Utrecht;00:00:02;42.8;00:00:03;0;1.67
+fa69da1d;(not set);No;Blog;googleorganic;Ureterp;00:19:49;43.2;00:00:03;0;1.00
+1d30ba6f;(not set);Yes;Blog;googleorganic;Rotterdam;00:13:24;15.7;00:04:21;0;2.50
+de19508f;10;No;Blog;googleorganic;Papendrecht;00:12:06;35.8;00:03:21;0;3.00
+8d940688;4;Yes;Blog;googleorganic;Leeuwarden;00:09:30;1.4;00:09:30;0;1.00
+9253cf39;7;Yes;Blog;googleorganic;Amsterdam;00:08:20;61.5;00:00:03;0;1.00
+875de7cd;5;Yes;Blog;googleorganic;Utrecht;00:07:48;50.2;00:00:14;0;1.00
+6de60f11;5;Yes;Blog;direct;Bergen op Zoom;00:07:01;65.1;00:00:18;0;1.50
+72380a68;(not set);Yes;Blog;googleorganic;Bilthoven;00:06:34;33.3;00:02:04;0;2.50
+b36d4bb5;0;No;Blog;googleorganic;Herkenbosch;00:05:45;2.2;00:00:21;0;1.50
+8eaac2c9;7;Yes;Blog;referral;Amsterdam;00:02:27;60.3;00:00:14;0;4.00
+5d3349d8;(not set);No;Blog;googleorganic;Vondelingenplaat;00:02:14;57.4;00:00:03;0;1.50
+6df5374c;(not set);No;Blog;referral;Sprang-Capelle;00:01:33;23.0;00:00:05;0;2.50
+4fbaab9c;8;No;Blog;googleorganic;Eindhoven;00:01:31;7.6;00:00:06;0;1.50
+29fa6b95;7;Yes;Blog;googleorganic;Sittard;00:01:28;9.9;00:00:04;0;2.50
+81f45e74;10;Yes;Blog;googleorganic;Soest;00:01:24;48.4;00:00:05;0;2.50
+7f91222f;(not set);Yes;Blog;googleorganic;Amsterdam;00:01:07;3.5;00:00:15;0;1.50
+c0b2b765;10;Yes;Blog;googleorganic;Berlicum;00:00:46;10.0;00:00:07;0;1.00
+1acf02f5;10;No;Blog;referral;Amsterdam;00:00:30;6.0;00:00:04;0;2.50
+d04e75ce;(not set);Yes;Blog;bingorganic;Aalst;00:00:21;2.4;00:00:14;0;1.50
+b947bf9a;10;Yes;Blog;googleorganic;Nieuwegein;00:00:02;1.4;00:00:03;0;1.50
+f2a7d658;6;Yes;Blog;googleorganic;Dordrecht;00:00:00;1.3;00:00:00;0;1.00
+cd463cbc;10;Yes;Blog;googlecpc;Vorden;00:05:04;12.7;00:00:15;0;1.00
+bdadaeec;7;Yes;Blog;googlecpc;Amsterdam;00:03:13;3.1;00:00:03;0;1.67
+66f613a4;(not set);Yes;Blog;direct;Haarlem;00:00:38;4.2;00:00:14;0;1.50
+f8505afa;8;No;Blog;direct;Oss;00:04:51;37.3;00:00:03;0;1.00
+3bc2cd86;7;Yes;Blog;exm;Barendrecht;00:07:51;60.3;00:01:03;0;2.50
+be6f983e;(not set);Yes;Blog;exm;Amsterdam;00:00:03;1.3;00:00:05;0;1.50
+bbc1d1e9;8;Yes;Blog;googleorganic;Middelburg;00:04:57;19.8;00:00:32;0;3.00
+76bab77d;10;Yes;Blog;googlecpc;Nijmegen;00:00:00;1.5;00:00:00;0;1.00
+42e0dbac;7;No;Product;googleorganic;Doetinchem;00:25:55;58.4;00:00:26;0;1.50
+902f2d85;5;Yes;Product;googleorganic;Geldrop;00:22:54;53.3;00:00:34;0;4.00
+68e97fe3;10;Yes;Product;direct;Alkmaar;00:20:52;40.4;00:00:54;0;7.00
+ec4de99c;10;Yes;Product;googlecpc;Schiedam;00:17:42;40.5;00:02:00;0;1.00
+ea890162;0;Yes;Product;googleorganic;(not set);00:14:16;47.8;00:00:35;0;10.50
+fc336606;(not set);Yes;Product;googleorganic;Delft;00:12:03;28.2;00:01:04;0;3.17
+8f5ea0ad;6;Yes;Product;googleorganic;Willemstad;00:08:35;53.9;00:00:29;0;7.00
+8c3115b4;5;Yes;Product;googleorganic;Paramaribo;00:08:14;3.0;00:05:29;0;2.50
+ae8370dc;6;No;Product;googleorganic;The Hague;00:08:08;12.0;00:00:16;0;2.50
+102369fa;(not set);Yes;Product;googleorganic;Kranenburg;00:05:51;38.5;00:00:28;0;6.50
+0e7c4c23;7;No;Product;googleorganic;Dedemsvaart;00:05:23;8.8;00:00:17;0;4.00
+c07b2a50;5;No;Product;googleorganic;Amsterdam;00:05:23;37.5;00:00:24;0;6.50
+465ee7c3;(not set);Yes;Product;googleorganic;Beek;00:04:21;29.3;00:00:37;0;5.50
+81c153ae;7;No;Product;googleorganic;Zundert;00:04:19;54.6;00:00:09;0;10.50
+f2267174;9;Yes;Product;googleorganic;Wassenaar;00:02:35;12.1;00:00:31;0;2.50
+6872a689;8;Yes;Product;googleorganic;Aalten;00:01:44;20.9;00:00:25;0;1.50
+dfc998d4;7;No;Product;googleorganic;Liempde;00:01:36;8.8;00:00:28;0;3.00
+9a05cd7d;5;Yes;Product;googleorganic;Almere;00:00:56;2.4;00:00:22;0;2.50
+1cd61d66;(not set);Yes;Product;googleorganic;Nieuw Amsterdam;00:00:47;2.2;00:00:32;0;1.50
+b3529dcb;9;Yes;Product;googlecpc;Amstelveen;00:00:46;1.5;00:00:46;0;1.00
+cd70d03c;(not set);Yes;Product;googleorganic;Drunen;00:00:42;2.2;00:00:28;0;1.50
+524c74b0;7;No;Product;googleorganic;(not set);00:00:38;2.3;00:00:25;0;1.50
+87832c59;9;No;Product;direct;Didam;00:00:37;1.7;00:00:00;0;1.00
+b2bf0d0b;(not set);Yes;Product;referral;Helmond;00:00:15;2.7;00:00:10;0;1.50
+3b2682fe;6;Yes;Product;googlecpc;Vriezenveen;00:00:04;1.4;00:00:00;0;1.00
+e409f328;(not set);Yes;Product;googlecpc;Rotterdam;00:00:03;1.4;00:00:00;0;1.00
+4f291b0c;4;No;Product;googlecpc;Amsterdam;00:00:00;1.7;00:00:00;0;1.00
+b766eeb2;10;No;Product;direct;Naaldwijk;00:09:56;40.1;00:00:00;0;0.00
+b8cd1418;7;No;Product;googleorganic;Amsterdam;00:00:06;1.7;00:00:00;0;0.00
+ca4e7e5e;(not set);Yes;Product;direct;Lommel;00:00:02;1.7;00:00:00;0;0.00
+84ab2f86;5;Yes;Product;googleorganic;Amsterdam;00:24:47;59.0;00:00:00;0;0.00
+7314a301;(not set);Yes;Product;googleorganic;(not set);00:09:30;70.2;00:00:00;0;0.00
+be80f2f7;(not set);Yes;Product;direct;The Hague;00:09:03;53.6;00:00:00;0;0.00
+89088baf;(not set);Yes;Product;googleorganic;Papendrecht;00:07:21;42.5;00:00:00;0;0.00
+eddace91;(not set);Yes;Product;googleorganic;Almere;00:07:16;4.7;00:00:00;0;0.00
+66c77e32;8;Yes;Product;googleorganic;Beek en Donk;00:05:07;26.2;00:00:00;0;0.00
+e0d2a52c;(not set);Yes;Product;googlecpc;Driebergen-Rijsenburg;00:04:15;76.9;00:00:00;0;0.00
+a5a96cb1;(not set);Yes;Product;googleorganic;Beverwijk;00:02:08;4.7;00:00:00;0;0.00
+d705a96b;7;Yes;Product;googleorganic;Helmond;00:02:08;4.2;00:00:00;0;0.00
+b8d0a626;9;Yes;Product;googleorganic;(not set);00:02:02;6.0;00:00:00;0;0.00
+3af8ffc5;(not set);Yes;Product;googleorganic;Uitgeest;00:01:56;8.0;00:00:00;0;0.00
+5ae1e453;(not set);Yes;Product;googleorganic;Reuver;00:01:17;5.4;00:00:00;0;0.00
+7bf8d0b1;(not set);Yes;Product;googleorganic;Breda;00:00:52;2.3;00:00:00;0;0.00
+af30bfb7;5;Yes;Product;googleorganic;Rotterdam;00:00:12;2.3;00:00:00;0;0.00
+6788b658;(not set);Yes;Product;googleorganic;The Hague;00:00:03;1.7;00:00:00;0;0.00
+20317491;(not set);Yes;Product;googleorganic;Rotterdam;00:00:32;2.7;00:00:11;0;1.00
+6f2b6045;(not set);No;Product;googleorganic;Amsterdam;00:02:36;4.7;00:01:04;0;1.50
+1000a879;8;Yes;Product;googlecpc;IJsselstein;00:02:12;3.2;00:00:11;0;1.50
+27cf34bb;8;No;Product;googlecpc;Voorhout;00:00:05;2.0;00:00:10;0;1.50
+8dd0ccd8;(not set);No;Product;googleorganic;Rotterdam;00:19:12;3.0;00:38:24;0;1.50
+e0afa839;(not set);Yes;Product;googlecpc;Amsterdam;00:00:36;13.0;00:00:21;0;1.67
+1c03a2a2;10;Yes;Product;googleorganic;Aalst;00:06:56;1.4;00:13:51;0;1.50
+2f6c2dca;(not set);Yes;Product;googleorganic;Prinsenbeek;00:04:20;4.7;00:00:07;0;1.50
+c767f602;9;Yes;Product;googleorganic;Amersfoort;00:07:06;24.9;00:00:15;0;2.50
+fe159807;5;Yes;Product;googleorganic;Almere;00:03:42;54.4;00:00:24;0;1.50
+37199211;7;Yes;Product;googleorganic;Venlo;00:03:39;4.7;00:01:09;0;3.00
+fd4f45cd;7;No;Product;googleorganic;Rijssen;00:01:08;1.9;00:00:00;0;1.00
+735437c0;(not set);Yes;Product;googlecpc;Assen;00:00:00;1.9;00:00:00;0;1.00
+55c5c651;(not set);Yes;Product;googleorganic;Winsum;00:08:36;57.1;00:00:19;0;2.50
+db061b9b;5;Yes;Product;googleorganic;Rotterdam;00:02:49;5.0;00:00:16;0;1.50
+e9839b42;8;Yes;Product;googleorganic;Hoofddorp;00:02:00;24.3;00:00:21;0;1.50
+5b3c173b;(not set);Yes;Product;googleorganic;Bergen;00:01:39;3.1;00:00:25;0;2.50
+4c5619c7;7;Yes;Product;googleorganic;Tessenderlo;00:01:36;3.3;00:00:24;0;2.50
+79e7658c;8;Yes;Product;googleorganic;Hoorn;00:06:06;41.8;00:00:24;0;1.50
+20502ca1;(not set);Yes;Product;googleorganic;Heiloo;00:04:05;55.7;00:00:04;0;1.00
+7e1f39f7;(not set);Yes;Product;googlecpc;Groningen;00:25:35;27.6;00:00:23;0;1.00
+131f174b;(not set);No;Product;bingorganic;Steenwijk;00:03:24;40.8;00:00:18;0;1.50
+9e0803af;6;No;Product;googleorganic;Amsterdam;00:00:04;2.4;00:00:08;0;1.50
+d626ed1d;8;Yes;Product;googleorganic;Steenwijk;00:15:08;24.4;00:00:05;0;2.50
+b48870c8;7;No;Product;googlecpc;Groningen;00:00:52;2.9;00:00:00;0;1.00
+a47dece1;(not set);Yes;Product;googleorganic;Kortrijk;00:12:37;4.5;00:04:02;0;2.50
+93e6e555;3;Yes;Product;googlecpc;Nijmegen;00:10:05;51.3;00:00:49;0;5.00
+a0cdf0c2;6;Yes;Product;googlecpc;Rotterdam;00:05:27;33.5;00:00:29;0;2.50
+950f0e0b;9;Yes;Product;googlecpc;Brummen;00:14:12;20.2;00:00:07;0;1.67
+985ebd62;6;Yes;Product;googlecpc;Schiedam;00:03:48;4.4;00:00:09;0;1.50
+9124135d;10;Yes;Product;googlecpc;Bergschenhoek;00:03:45;43.3;00:00:06;0;1.00
+e4a9f383;(not set);No;Product;googleorganic;Coevorden;00:06:34;4.5;00:02:43;0;3.00
+5fde2c3a;(not set);Yes;Product;googleorganic;Hoofddorp;00:03:05;3.3;00:00:43;0;2.50
+328a221e;6;No;Product;googleorganic;Herwijnen;00:01:35;3.2;00:00:56;0;1.50
+f884c611;8;Yes;Product;googleorganic;De Cocksdorp;00:00:00;1.7;00:00:00;0;1.00
+633483de;3;Yes;Product;googleorganic;Dubai;00:05:59;35.7;00:01:04;0;1.50
+a1cc4231;8;Yes;Product;googleorganic;Kaatsheuvel;00:06:41;32.8;00:07:04;0;1.50
+f32c3344;7;Yes;Product;googleorganic;Oosterhout;00:05:39;7.4;00:01:43;0;1.50
+30e4babc;7;Yes;Product;googleorganic;Maastricht;00:00:38;1.3;00:00:38;0;1.00
+2a57234d;(not set);Yes;Product;googlecpc;Venray;00:09:57;42.8;00:00:37;0;8.00
+61058a5f;10;Yes;Product;googlecpc;Weesp;00:01:21;38.5;00:00:07;0;1.00
+83b1efa8;(not set);Yes;Product;facebookcpm;Roosendaal;00:00:31;3.8;00:00:10;0;1.00
+2875d811;7;Yes;Product;googlecpc;Tilburg;00:00:00;4.3;00:00:00;0;1.00
+d232f339;(not set);Yes;Product;googlecpc;Maarssen;00:24:10;18.9;00:00:34;0;1.00
+58f210fa;(not set);Yes;Product;googleorganic;Aloha;00:56:54;28.2;00:00:30;0;10.50
+39175770;8;Yes;Product;googlecpc;The Hague;00:34:11;22.0;00:00:19;0;4.00
+8fbc34ad;9;Yes;Product;googlecpc;Sint-Michielsgestel;00:26:58;71.5;00:00:18;0;1.50
+3e576abc;(not set);Yes;Product;googlecpc;Eindhoven;00:25:11;70.8;00:00:03;0;1.00
+03032e7d;8;Yes;Product;googlecpc;Landgraaf;00:14:10;40.6;00:02:58;0;2.50
+24353a6f;10;Yes;Product;googleorganic;Schiedam;00:14:09;48.8;00:00:36;0;8.00
+9026f4df;8;Yes;Product;direct;Gouda;00:12:02;2.1;00:00:00;0;1.00
+f146366a;9;Yes;Product;googlecpc;Leeuwarden;00:12:01;48.4;00:00:09;0;5.50
+898ac4bb;(not set);Yes;Product;googlecpc;Rotterdam;00:11:23;41.1;00:00:11;0;6.50
+759008fe;(not set);Yes;Product;googlecpc;Chasseneuil-du-Poitou;00:08:58;75.9;00:00:16;0;1.50
+ff63ad2b;8;Yes;Product;googleorganic;Maastricht;00:08:06;64.4;00:02:08;0;1.50
+c80064e8;8;Yes;Product;googlecpc;Rotterdam;00:07:44;43.2;00:00:13;0;1.50
+63a7ac59;(not set);Yes;Product;googlecpc;Rotterdam;00:07:39;2.3;00:00:31;0;1.50
+9ef10330;7;Yes;Product;googlecpc;Amsterdam;00:07:29;4.5;00:02:30;0;4.00
+a043f522;(not set);Yes;Product;googleorganic;New York;00:05:28;19.1;00:00:17;0;1.50
+a1548a95;(not set);Yes;Product;googlecpc;Haarlem;00:04:44;18.8;00:00:19;0;7.00
+fcff60a3;8;No;Product;googlecpc;Drachten;00:04:34;76.1;00:00:36;0;3.33
+061e7b39;10;Yes;Product;googlecpc;Rotterdam;00:03:47;42.4;00:00:13;0;5.00
+1504001b;(not set);Yes;Product;googleorganic;Brussels;00:03:37;58.3;00:00:11;0;4.00
+5ba16dbf;(not set);Yes;Product;googlecpc;Barneveld;00:03:29;68.3;00:00:03;0;1.00
+09c5b671;(not set);Yes;Product;googleorganic;Deventer;00:03:11;37.9;00:00:39;0;4.00
+a9271afb;(not set);Yes;Product;googlecpc;Breda;00:03:03;11.1;00:00:14;0;1.50
+d6b02aa2;10;Yes;Product;googlecpc;Teteringen;00:03:01;2.4;00:01:38;0;1.50
+6d5bc0a0;7;Yes;Product;googlecpc;Bussum;00:02:54;15.6;00:00:12;0;4.20
+e7995b3f;(not set);Yes;Product;googlecpc;Harderwijk;00:02:49;8.2;00:01:53;0;1.50
+310482b6;9;Yes;Product;googlecpc;Nijmegen;00:01:18;2.0;00:00:24;0;3.00
+e9a20d9b;9;Yes;Product;googlecpc;Huissen;00:00:31;5.9;00:00:21;0;1.50
+1edfec81;(not set);Yes;Product;googlecpc;Valkenswaard;00:00:28;15.9;00:00:06;0;1.50
+8d5b7599;10;Yes;Product;googlecpc;Leeuwarden;00:00:00;2.2;00:00:00;0;1.00
+3d13b13e;(not set);Yes;Product;referral;Almere;00:34:58;47.8;00:01:21;0;3.67
+84cafe51;(not set);Yes;Product;direct;Eindhoven;00:08:43;5.5;00:02:32;0;2.50
+ed9388d3;(not set);Yes;Product;googlecpc;Delft;00:06:39;59.9;00:00:30;0;1.00
+bee586d6;8;Yes;Product;googlecpc;Amsterdam;00:05:18;22.8;00:01:25;0;3.33
+78c8cea8;7;Yes;Product;googlecpc;Doetinchem;00:05:12;59.2;00:00:39;0;1.50
+73a371a2;(not set);No;Product;googlecpc;Geleen;00:04:57;10.5;00:01:09;0;2.50
+52ccddd1;(not set);Yes;Product;googlecpc;Nijmegen;00:02:46;8.2;00:00:34;0;2.50
+0fe60020;9;Yes;Product;googleorganic;Haaksbergen;00:01:09;2.2;00:00:15;0;1.50
+d608f071;(not set);No;Product;googlecpc;Utrecht;00:00:44;6.4;00:00:06;0;1.50
+91568711;8;Yes;Product;googlecpc;Rotterdam;00:00:00;3.5;00:00:00;0;1.00
+de87f3c7;(not set);No;Product;googlecpc;Amsterdam;00:14:25;24.9;00:02:22;0;3.20
+14144381;(not set);Yes;Product;googlecpc;Arnhem;00:07:25;34.4;00:00:23;0;1.50
+2f0d7017;(not set);Yes;Product;googlecpc;Rotterdam;00:06:16;3.6;00:12:32;0;1.50
+958908f5;(not set);Yes;Product;googlecpc;Zieuwent;00:05:08;19.4;00:00:07;0;2.50
+faea65d2;(not set);Yes;Product;googlecpc;Schijndel;00:00:34;7.0;00:00:03;0;1.00
+0102d6dd;(not set);Yes;Product;googleorganic;Oss;00:04:49;36.8;00:00:08;0;2.50
+ad4726dc;8;Yes;Product;googleorganic;Gouda;00:01:41;5.0;00:00:03;0;1.50
+206e608e;8;Yes;Product;googlecpc;Enschede;00:00:16;2.4;00:00:32;0;1.50
+3e32d325;(not set);Yes;Product;referral;Beilen;00:02:34;3.3;00:00:29;0;2.50
+bb3eeb98;3;No;Product;googlecpc;Assen;00:43:56;68.7;00:00:04;0;1.00
+4a8af45c;8;Yes;Product;googlecpc;Vlaardingen;00:25:27;42.5;00:15:29;0;1.00
+0966f950;(not set);Yes;Product;googlecpc;Joure;00:05:53;2.6;00:09:49;0;1.60
+c215f4e6;(not set);No;Product;googleorganic;Dinteloord;00:03:22;18.8;00:00:48;0;1.50
+5980ba83;(not set);Yes;Product;googleorganic;Vlijmen;00:03:00;31.6;00:00:23;0;4.00
+779b4092;4;Yes;Product;googlecpc;Meppel;00:10:28;62.5;00:00:05;0;2.50
+cae695cf;7;No;Product;googlecpc;Delft;00:05:51;42.3;00:00:26;0;1.00
+22e0ef90;5;Yes;Product;googlecpc;Purmerend;00:02:36;1.8;00:00:31;0;3.00
+4aa5cf34;0;Yes;Product;googleorganic;Bolsward;00:00:00;1.8;00:00:00;0;1.00
+9548a81e;(not set);Yes;Product;googleorganic;Nijmegen;00:39:28;71.0;00:00:53;0;2.50
+68074824;(not set);Yes;Product;googleorganic;Utrecht;00:23:56;17.0;00:00:29;0;11.67
+ab8b853a;7;Yes;Product;googleorganic;Utrecht;00:20:31;5.8;00:09:32;0;1.00
+742fb67b;(not set);Yes;Product;googleorganic;Geleen;00:18:17;39.0;00:01:36;0;5.50
+31329120;(not set);Yes;Product;googleorganic;Utrecht;00:18:05;50.3;00:00:10;0;1.00
+1e80387d;7;No;Product;googleorganic;Waalwijk;00:17:46;5.9;00:11:34;0;1.50
+de6e7b51;(not set);Yes;Product;googleorganic;'s-Heer Hendrikskinderen;00:17:30;2.2;00:35:00;0;1.50
+a3ab592e;(not set);Yes;Product;googleorganic;The Hague;00:15:17;58.8;00:00:14;0;1.50
+2953aff9;8;Yes;Product;googleorganic;Woerden;00:13:42;73.1;00:02:01;0;3.00
+dfccaeee;(not set);Yes;Product;googleorganic;Katwijk aan Zee;00:13:33;53.5;00:01:23;0;5.50
+dd51d7e9;(not set);No;Product;direct;Utrecht;00:13:26;30.5;00:05:05;0;2.67
+d510b8d1;7;Yes;Product;googleorganic;Huizen;00:13:09;9.6;00:00:18;0;6.50
+f918b33b;8;Yes;Product;googleorganic;Schijndel;00:12:27;30.3;00:01:50;0;5.00
+52fc925a;7;No;Product;googleorganic;Beverwijk;00:12:25;75.4;00:00:39;0;1.50
+5c210b73;(not set);No;Product;googleorganic;Brummen;00:10:36;43.2;00:01:49;0;3.00
+37d39e44;(not set);Yes;Product;googleorganic;Katwijk aan Zee;00:10:27;75.1;00:00:12;0;2.50
+c095dd3e;5;Yes;Product;googleorganic;Erp;00:10:06;69.8;00:01:08;0;2.50
+60c5565e;9;Yes;Product;googleorganic;Roosendaal;00:08:57;34.6;00:02:59;0;1.67
+0df9168c;(not set);No;Product;direct;Zuid-Scharwoude;00:07:28;4.1;00:00:14;0;1.50
+2f1420e2;8;Yes;Product;googleorganic;Amsterdam;00:06:15;6.1;00:07:45;0;1.50
+e88822bf;(not set);Yes;Product;googleorganic;Heerlen;00:04:48;24.0;00:01:22;0;2.50
+94418c2e;(not set);Yes;Product;googleorganic;Burgum;00:02:53;51.9;00:00:26;0;2.50
+6a08135d;8;Yes;Product;direct;Oude-Tonge;00:02:33;4.6;00:00:03;0;1.00
+2535704;8;Yes;Product;googleorganic;Amsterdam;00:02:31;58.6;00:00:15;0;3.00
+64d72a0e;7;No;Product;googleorganic;Rotterdam;00:02:31;21.6;00:00:19;0;2.50
+114ac33e;8;Yes;Product;direct;Amsterdam;00:02:30;33.3;00:00:05;0;1.00
+9d0df239;(not set);Yes;Product;googleorganic;Amsterdam;00:02:08;9.2;00:00:41;0;4.00
+1baff12f;(not set);Yes;Product;googleorganic;Amsterdam;00:01:55;24.9;00:00:14;0;1.00
+0398a8e6;6;Yes;Product;googleorganic;Amsterdam;00:01:13;7.4;00:00:23;0;1.00
+d4eb4295;8;Yes;Product;googleorganic;Alkmaar;00:01:05;2.7;00:00:42;0;2.50
+4c94cf32;(not set);Yes;Product;googleorganic;Amsterdam;00:00:46;2.7;00:00:31;0;1.50
+91ecc8f9;10;Yes;Product;googleorganic;Zwolle;00:00:27;2.7;00:00:16;0;1.50
+3114293c;8;Yes;Product;googleorganic;Dodewaard;00:00:22;2.2;00:00:11;0;1.50
+632c505d;7;Yes;Product;googleorganic;Delft;00:19:15;52.4;00:04:46;0;2.50
+994fbb02;10;Yes;Product;direct;Papendrecht;00:13:18;51.8;00:00:10;0;1.50
+96f6c53f;8;Yes;Product;direct;IJsselstein;00:12:10;31.9;00:02:03;0;4.00
+bddab9c1;10;Yes;Product;googleorganic;Waspik;00:10:23;6.1;00:00:14;0;1.00
+ae20b99f;(not set);Yes;Product;googleorganic;Amsterdam;00:09:18;12.1;00:01:17;0;1.00
+dedf3ab7;(not set);Yes;Product;googleorganic;The Hague;00:08:47;60.9;00:00:06;0;1.00
+fbca2ec5;(not set);Yes;Product;googleorganic;Rotterdam;00:08:00;24.7;00:00:29;0;1.67
+3f0df8cb;7;Yes;Product;googleorganic;Antwerp;00:07:26;56.7;00:00:24;0;3.00
+c9dc9de6;9;No;Product;googleorganic;Elst;00:06:30;4.9;00:02:04;0;1.50
+0d113861;(not set);Yes;Product;googleorganic;Groningen;00:06:08;38.7;00:00:38;0;2.67
+c30f9307;(not set);Yes;Product;googleorganic;Wildervank;00:03:38;3.1;00:00:37;0;2.50
+a4a49d2c;8;No;Product;googleorganic;(not set);00:03:20;31.6;00:00:31;0;1.00
+d11b0dc5;(not set);Yes;Product;googleorganic;Hoogvliet Rotterdam;00:03:18;11.6;00:00:04;0;1.50
+3c9f9c62;7;Yes;Product;googleorganic;Zwolle;00:03:05;59.7;00:00:07;0;1.50
+94267d83;(not set);Yes;Product;googleorganic;Almere;00:02:47;32.6;00:00:13;0;1.50
+fd081852;10;Yes;Product;googleorganic;Maarssen;00:02:28;4.8;00:00:30;0;1.50
+1a513ce7;(not set);Yes;Product;googleorganic;Lochem;00:02:17;1.8;00:00:00;0;1.00
+1ebd73ce;9;Yes;Product;googleorganic;Tilburg;00:01:39;3.1;00:01:39;0;2.00
+f13d223c;(not set);Yes;Product;googleorganic;Rotterdam;00:01:34;5.0;00:00:10;0;1.50
+8803ac5b;(not set);Yes;Product;googleorganic;Paramaribo;00:01:07;2.4;00:00:45;0;1.50
+b3fb5b9a;(not set);Yes;Product;googleorganic;Delft;00:00:54;2.5;00:00:07;0;1.50
+a8d9fe67;(not set);No;Product;googleorganic;Domburg;00:00:34;8.1;00:00:04;0;1.00
+f37a5eea;7;No;Product;googleorganic;Naarden;00:04:10;4.3;00:04:01;0;1.00
+506bb777;(not set);No;Product;googleorganic;Berkel en Rodenrijs;00:00:35;2.8;00:00:07;0;1.50
+5e32dab7;9;Yes;Product;googleorganic;Amsterdam;00:03:00;10.6;00:00:35;0;3.00
+5fc5ab8c;6;Yes;Product;googleorganic;Schijndel;00:00:53;5.4;00:00:30;0;1.50
+d5912b13;6;No;Product;googleorganic;Heeze;00:10:23;50.4;00:01:12;0;5.00
+fd046ab9;7;No;Product;googleorganic;Bladel;00:02:41;23.8;00:00:23;0;1.50
+a21965d0;8;Yes;Product;googleorganic;Diest;00:02:20;4.1;00:00:35;0;1.50
+3563b8c6;(not set);No;Product;googleorganic;Roermond;00:30:54;56.0;00:02:25;0;3.00
+d1398e7e;8;Yes;Product;googleorganic;Kampen;00:01:04;2.0;00:00:00;0;1.00
+c0058636;7;Yes;Product;exm;Reeuwijk;00:02:33;2.9;00:01:06;0;1.50
+a28e1edf;7;Yes;Product;referral;Amsterdam;00:34:26;22.4;00:00:07;0;9.00
+6b67f0c0;(not set);Yes;Blog;direct;Capelle aan den IJssel;00:02:32;50.0;00:00:08;0;3.00
+fac8e872;10;Yes;Blog;referral;Elst;00:01:57;19.6;00:00:12;0;5.00
+8dc63974;(not set);Yes;Blog;direct;Oud-Vossemeer;00:37:08;5.8;00:00:06;0;1.00
+bc3cda21;8;Yes;Blog;direct;Zoetermeer;00:05:15;66.6;00:00:04;0;1.00
+4d59a3ef;6;Yes;Blog;googleorganic;Etten-Leur;00:04:09;63.2;00:00:05;0;1.00
+fcbb60d5;8;No;Blog;direct;Paramaribo;00:03:20;8.0;00:00:10;0;1.00
+fd783552;(not set);No;Blog;direct;London;00:03:08;5.6;00:00:03;0;1.00
+9f9e2ca9;(not set);No;Blog;website;Sint-Oedenrode;00:02:55;22.0;00:00:03;0;1.00
+54c1ad04;(not set);Yes;Blog;direct;Brunssum;00:00:42;2.5;00:00:11;0;1.00
+c5587103;7;Yes;Blog;googlecpc;Wassenaar;00:00:36;10.9;00:00:02;0;1.00
+68cfacf2;(not set);Yes;Blog;exm;Zandvoort;00:31:28;44.9;00:00:01;0;1.00
+3cf32a3f;(not set);Yes;Blog;googlecpc;Ede;00:23:33;29.8;00:00:03;0;1.00
+2f2eea20;7;No;Blog;googleorganic;Heerenveen;00:13:00;16.9;00:15:36;0;1.83
+a4335c09;(not set);Yes;Blog;googlecpc;Nunspeet;00:06:28;5.9;00:00:09;0;2.50
+e793672d;(not set);No;Blog;googleorganic;Tilburg;00:00:00;1.5;00:00:00;0;1.00
+375f8037;(not set);No;Blog;exm;Rotterdam;00:00:00;1.5;00:00:00;0;1.00
+547f31cd;(not set);No;Blog;exm;Breda;00:03:29;3.6;00:00:19;0;4.00
+9c07e4f0;8;Yes;Blog;googlecpc;Heerhugowaard;00:00:11;2.5;00:00:05;0;3.00
+ee1a93ae;(not set);Yes;Blog;googlecpc;The Hague;00:00:03;1.5;00:00:06;0;1.50
+b5270c3a;(not set);Yes;Blog;googlecpc;(not set);00:03:29;5.6;00:01:42;0;1.50

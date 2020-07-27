@@ -1,0 +1,852 @@
+---
+output:
+  word_document: default
+  pdf_document: default
+---
+
+# Purchase prediction trough Machine Learning
+Data Science assignment, Harvard Data Science 
+By Michel Brok, July 2020
+
+\newpage
+
+## Management Summary
+
+**Context**
+
+For companies that are not selling their goods via the internet it is much more difficult to understand the impact of digital marketing activties on purchasing. But the internet does influence the 'path of purchase', with consumers that are seeking for information, also directly from manufacturer and brand website.
+
+To get a better understanding of the 'path to purchase', this company implemented a survey on their website that ask visitors if they are buying their products and what the most important reasons are. There is a connection being made with the Google Analytics software that measures website behavior. 
+
+The dataset being used for this assignment contains this survey information together with some relevant website behavior data.
+
+**Problem definition**
+
+The main question:  how to predict buying behavior?. In this assignment a Machine Learning model will be created, trying to predict buying behavior and answering the main questions of this assignment.
+
+**Methodology**
+
+The steps being taking:
+
+1: Problem definition
+2: Importing the dataset
+3: Exploratory Data Analysis (EDA)
+4: Data preperation
+5: Training the model
+6: Evaluate model performance
+
+**Conclusions**
+
+The main question of this assignment is, **how can we predict buying behavior?**. To answer that question a 'Exploratory Data Analysis' has being done to get already a first view on the features and their chances to be the most important predictor. Already from this analysis, the 'NPS' score seemed to be the best candidate. After testing different models and selecting the right model, which was more difficult as the dataset is imbalanced,  the 'xgbDart' model seems to best performing model with an accuracy of 0.63 and a Kappa value of 0.05. Also 'stacking' was being used to see if the performance could increase with the use of different models together. But based on the 'ROC-curve' comparing the two models, the 'xgbDart' was still the best performing model.
+
+In the 'variable importancy plot' is very clearly to see that 'nps' is the most important variable helping to predict buying behavior. The other variables seemed to be less effective after further analysis. The recommendation is to first start understanding how to improve the NPS-scores and using Machine Learning algorithm understanding the effects of an improved NPS-score. Further recommendation would be to increase the amount of data and ensuring data quality to also see the effect of the other potential predictors of buying behavior. 
+
+\newpage
+
+## Table of contents
+
+(@) Introduction
+(@) Importing the dataset
+(@) Exploratory Data Analysis (EDA)
+(@) Data preperation
+(@) Training the model
+(@) Evaluation model performance
+(@) Final conclusion
+
+\newpage
+
+## 1 Introduction
+
+In this assignment the main questions is: how can we predict buying behavior with the features in the dataset. This is a binary classification problem (yes or no) with multiple features and therefore a supervised learning model. The file being used for this assignment is a csv-document with data collected from the period March till July 2020. The data collection has been done via Google Analytics (online webanalytics software) in combination with Hotjar (online survey software). Via the Hotjar tool, vistors of the website are mainly being asked if they are using the product. The reasons for doing this is that the digital marketing strategie is towards engagement and not selling product. This data is being combnined with website behavior data that is being collected with the Google Analytics software. 
+
+This data is an export coming directly from the system where every row contains information about each respondent. The 'userid' variable contains a number that can't be related to a person and is inline with the privacy regulations.
+
+## 2 Importing the dataset
+
+In this section the libraries are being loaded which are needed for analysis and model building. The dataset will be imported and a check will be made to understand the data and if the import went correctly.
+
+### 2.1 Loading the libraries
+
+Loading the libraries first to make us of the functionalities.
+
+```{r}
+library(plyr)
+library(dplyr)
+library(dplyr)
+library(ggplot2)
+library(PerformanceAnalytics)
+library(ggthemes)
+library(corrplot)
+library(car)
+library(caret)
+library(caretEnsemble)
+library(foreach)
+library(doParallel)
+library(chron)
+library(hms)
+library(tidyr)
+library(tidyverse)
+library(mice)
+library(lubridate)
+library(randomForest)
+library(gbm)
+library(effects)
+library(pdp)
+library(cvms)
+library(broom)
+library(modelplotr)
+library(visreg)
+library(margins)
+library(data.table)
+```
+
+### 2.2 Importing the dataset
+
+The dataset is stored on the local computer and being imported via the read.csv function. The "na.string" option is used to convert the factor variables as much as possible to numeric vectors.
+
+```{r}
+dataset <- read.csv("~/project/Own assignment/dataset_assignment_v02.csv", sep=";", na.strings = "na")
+str(dataset)
+class(dataset)
+n_distinct(dataset)
+summary(dataset)
+```
+
+The dataset contains 970 observations with 11 variables or features. These 970 observations are unique, meaning that every row contains a new observation. The class of the data set is a data frame. Almost all variables are "factors" which is important to understand for the steps being taken exploring them and later on to manipulate for the machine learning model. The data that is collected contains different elements around website behavior and questions if people are giving the product and what NPS (NPS stands for Net Promotor Score, a score that helps in understanding how satisfied customers are) score is. 
+
+The first step is taken with important the dataset and explorting the first results. The next step is a more detailed exploration of the data (EDA).
+
+## 3 Exploratory Data Analysis (EDA)
+
+After the first steps of loading the libraries and important the data, a more deeper analysis will being done in this section to understand the data better and prepare for the modeling phase.
+
+### 3.1 Checking for missing values
+
+Before the analysis starts, a check will be done if values are missing with the "anyNa" and "sapply" function.
+
+```{r}
+anyNA(dataset)
+sapply(dataset, {function(x)
+  any(is.na(x))})
+```
+
+In the variables no missing values are being found. The analysis will continue and starts with exploring the most important variable, the buyers data.
+
+### 3.2 Features of the dataset
+
+Before the analysis starts, what are the most important features and how do they look like? The "glimse" function will be used to get a first view on the dataset.
+
+```{r}
+glimpse(dataset)
+```
+
+**Userid**
+This feature contains data about the userid with purpose to create a record per respondent and avoid duplicates. This feature will later not being used as it is not relevant for the goal of this assignment
+
+**nps** 
+The NPS-feature contains data about the NPS-score being given. NPS stands for Net Promotor Score and is being used to understand if customer that are satisfied would recommend the product or service to someone else. In this case, the NPS-question is if people are recommending the website to someone else. When a score is giving of 9 or 10, then people are called a "promotor", meaning that they will probably actively will promote the product or service to someone else. People giving a 7 or 8 are called " passives, they are satisfied but not very enthusiastic and they could be vulnerabele for competitive offers. Detractors are the one giving 1-6 scores, they can potentially damage the brand with negative word-of-mouth [source](https://www.netpromoter.com/know/). This feature also "not set" results meaning that respondents didn't give a NPS-score. 
+
+**giving_product**
+The most important feature in the dataset contains information about buyers vs non-buyers.
+
+**page_type**
+This feature contains data about the type of pages are being visited on the website.
+
+**source_used**
+These are the channels that respondents used to enter the website.
+
+**city**
+As it says, the city that the respondents are located in.
+
+**avg_session_duration**
+The session duration is being measured in Google Analytics which is web-analytics software. The sessions duration measures how long a person within a session in average is on the website. This is an imporant metric is it is often being used to measure the engagement of the website.
+
+**avg_session_quality**
+The average sessions quality feature is a number being given by the Google Analytics software how high the quality of a user is on the website [source](https://support.google.com/analytics/answer/7303153?hl=en#:~:text=About%20session%20quality,-Using%20similar%20machine&text=Session%20Quality%20is%20calculated%20for,during%20January%201%20%2D%20January%2031). 
+
+**avg_time_on_page**
+This feature measure how long a visitors on the website is visiting a webpage.
+
+**registration_completed**
+This feature containts data if a respondent registered to the e-mail-program of the website.
+
+**pages_session**
+The pages per session is a Google Analytics metric that show how many pages are being visited. Also this is an important metric for consumer engagement.
+
+With a view on the features are their data, this section continues with the analysis of the features, starting with the most important one, the buyers data.
+
+#### 3.2.1 Buyers vs non-buyers
+
+More information about people that are buying or not buying, is in the "giving_product" variable. The "dplyr" functionalities with "pipe operator" is being used to get quickly the information together in one overview.
+
+```{r}
+dataset %>%
+group_by(giving_product) %>%
+tally(sort = TRUE) %>%
+mutate(percent = n/sum(n) * 100) 
+```
+
+From the 970 unique observations, 760 people answer with "yes" on the question "are you giving the product". In this assignment we consider this as a person buying the product and ofcourse the other way around. The buyers-group is the biggest group with 78%. A 22% of the people are not giving the product and we consider them as "non-buyers". As mentioned earlier, all recorder are unique observations so these are being handled as suchs. 
+
+#### 3.2.2 What is the NPS-score telling?
+
+The NPS-scores being measures tells something about the performance of the website. In this section the analysis is being done how the NPS-scores are being distributed and if there's a relation between NPS-scores and buying behavior. 
+
+**NPS scores given**
+Quick view on the NPS data and the distribution of NPS-scores. First the data needs to be converted from factor, to character to numeric to get a decent graph. The "hist" function is being used to get a plot.
+
+```{r}
+dataset$nps <- as.character(dataset$nps)
+dataset$nps <- as.numeric(dataset$nps)
+hist(dataset$nps, main= "NPS distribution", xlab = "NPS score", ylab = "Count")
+```
+
+First view shows that most of te scores are being between 7 and 8. In the histogram above there is no difference between the scores between buyers and non-buyers.
+
+**NPS scores buyers vs non-buyers**
+
+To get a view on the differences of nps scores per group, the ggplot-functionality is being used where the size of the point represents the count per NPS-score.
+
+```{r}
+dataset %>%
+  select(giving_product, nps) %>%
+  filter(nps >= 0) %>%
+  group_by(giving_product) %>%
+  count(nps) %>%
+  ggplot(aes(x=giving_product, y=nps)) +
+  geom_point(aes(size=n)) +
+  scale_y_continuous(breaks = seq(0,10, 1), 
+                     limit=c(0,10))
+```
+
+In the graph above, in both of the groups the most scores are being given between 7 and 8. This was also to see in the previous graph with no distinction between buyers and non-buyers. But in this graph, more clearly is to see that the higher NPS-scores are giving by the group of buyers. Which could also has to do with the fact that the group of buyers is much bigger then the group of non-buyers (78% of buyers and 22% of non-buyers). Therefore the average per group will be calculated.
+
+**Average NPS-scores per group**
+
+Because "NA's" are being detected in the dataset, the "na.omit" option is being used to filter out the NA's to get the average of NPS-scores.
+
+```{r}
+nps <- dataset$nps
+nps <- na.omit(dataset$nps)
+mean(nps, na.rm = TRUE)
+str(nps)
+length(nps)
+```
+
+The average NPS score is 7.4 for all groups with the NA's being excluded, resulting in a smaller group of observation (588 instead of 970). To get the average scores per group, the dplyr "pipe operator" is being used again with filter this time on higher NPS-scores then 0.
+
+```{r}
+dataset %>%
+  select(giving_product, nps) %>%
+  filter(nps >= 0) %>%
+  group_by(giving_product) %>%
+  summarize(mean_nps = mean(nps))
+```
+
+The average NPS-scores giving by the buyers and non-buyers shows a smaller difference, with 6.8 for non-buyers and 7.6 for buyers. The difference is not that big with 20%. For a normal customer satisfaction, scores between 7 and 8 are not that bad,  but to use the power of NPS, a score of 9-10 is needed. To see the the difference between the amount of promotors for buyers and non-buyers, this group will seperatly being analysed.
+
+**Amount of promotors between buyers and non-buyers**
+
+The difference between buyers and non-buyers NPS scores seems to be small. In the graph where the NPS-scores per group was being visualized, was to see that the buyers group seems to give higher scores. The "promotors" (NPS 9 and higher) are being searched with the filter option (nps equal or bigger then 9).
+
+```{r}
+promotors <-dataset %>%
+  select(giving_product, nps) %>%
+  filter(nps >=9) %>%
+  group_by(giving_product) %>%
+  tally() 
+promotors
+```
+
+When only looking at the promotors (NPS score 9 and 10) it seems that the buying group is much bigger, but the buying-group in general is also bigger then the non-buying group. This is clearly to see in the simply graph below, with the count of NPS-scores per group.
+
+```{r}
+non_promotors <- dataset %>%
+  select(giving_product, nps) %>%
+  filter(nps >= 0) %>%
+  group_by(giving_product) %>%
+  tally() 
+non_promotors
+```
+
+To see the difference relatively, the data is being put together with the "merge" function and combines the data from the previous two tibbles, the "promotors" and "non-promotors". Based on the total counts the percentage has been calculated.
+
+```{r}
+promotors_non_promotors <- merge(promotors, non_promotors, by = "giving_product", all = TRUE, suffix = c(".promotors", ".non_promotors")) %>% mutate(total_percent_promotors = n.promotors / n.non_promotors *100)
+promotors_non_promotors
+```
+
+Also relatively the amount of promotors under the buying-group is bigger then with the non-buyers. In the buying group, 26% are "promotors" giving a NPS-score with 9 or higher, whilst only 13% of promotors can be found in the non-buying group.  Here we see that the amount of promotors is 26% under the buyers and for people that are not buying the score is around 6%. Here we could say that there is a bigger difference between buyers and non-buyers when looking to NPS score.
+
+The table with the scores are difficult to read, a graph will be made from the scores with the "ggplot" functionality. As it is a dataframe, it first need to converted to a list.
+
+```{r}
+lp <- as.tbl(promotors_non_promotors)
+lp <- list(promotors_non_promotors)
+names(lp) <- c("promotors_non_promotors")
+blp <- rbindlist(lp, id="id", use.names = TRUE)
+ggplot() +
+  geom_bar(data = blp, aes(x= giving_product, y=total_percent_promotors, fill = giving_product), stat = 'identity')
+
+```
+
+#### 3.2.3 Which cities are buyers coming from?
+
+After analysing the NPS-feature and to understand how it's impacting buyers and non-buyers, in this section the "city" feature will be analysed. First, a quick view on the "city" feature.
+
+```{r}
+str(dataset$city)
+head(dataset$city, n=50)
+length(dataset$city)
+```
+
+Inspecting the city dataset, there are 970 observations with 327 levels, meaning that there are 327 different observations. Also here is to see that there is a "(not set)" observation, which means the city was not given in. The "not set" records will converted to NA for analysis purposes. First, how much "not set" vectors are there?
+
+```{r}
+dataset %>%
+  select(city) %>%
+  mutate(as.character(city)) %>%
+  filter(city == "(not set)") %>%
+  count(city)
+```
+
+There are 25 "(not set)" variables that needs to be removed. Actually those will not be removed but converted to NA. This with the purpose to keep the complete overview on the dataset and later on for analysis purposes the NA's can easily be "hide" from the dataset.  
+
+```{r}
+dataset$city [dataset$city == "(not set)"] <- NA
+```
+
+After changing the "(not set)" values to NA, futher exploration will be done on the city feature.
+
+**Cities with most respondents**
+
+Creating a first view on where respondent are coming from without filtering on buyer vs non-buyer. Therefore the "pipe" function is being used to filter the right data and ggplot for creating the graph.
+
+```{r}
+dataset %>%
+  select(city) %>%
+  na.omit(city) %>%
+  count(city, sort = TRUE) %>%
+  mutate(percentage = n / sum(n) * 100) %>%
+  slice(1:10) %>%
+  mutate(city = fct_reorder(city, n, .desc = TRUE)) %>%
+  ggplot() +
+  geom_bar(aes( x= city, y = n), stat = "identity")
+```
+
+Most of the buyers are coming from Amsterdam, Rotterdam and Utrecht which are also the biggest cities in the Netherlands. Funny fact is that there are buyers from Paramaribo which is not a country the company operates in.
+
+**Buyers and the biggest cities**
+
+Now filtering will be done on the group of buyers and the cities that they come from. With the dplyr-functionality the right selection will be made to filter the data. The "na.omit" option is used to exlude the NA's wich where being converted from the "(not set)" observation. The "count" function counts the records and the "mutate" function convert the count to percentage. With the "slice" function only the 10 records will be showned. With the "fct_reorder" function the right order will be created to prepare for displaying the graph with the ggplot-function.
+
+```{r}
+dataset %>%
+  select(city, giving_product) %>%
+  group_by(giving_product) %>%
+  filter(giving_product == "Yes") %>%
+  na.omit(city) %>%
+  count(city, sort = TRUE) %>%
+  mutate(percentage = n / sum(n) * 100) %>%
+  slice(1:10) %>%
+  mutate(city = fct_reorder(city, n, .desc = TRUE)) %>%
+  ggplot() +
+  geom_bar(aes( x= city, y = percentage), stat = "identity")
+```
+
+After filtering the data, a similair view exist as the unfiltered version. Also here the biggest cities are similair with the biggest cities in the Netherland. There is one difference compared with the full view which is the city of "Eindhoven" that changed places with "The Hague".
+
+**Non-buyers and the biggest cities**
+
+Here a repetition of cities with the non-buying group.
+
+```{r}
+dataset %>%
+  select(city, giving_product) %>%
+  filter(giving_product == "No") %>%
+  na.omit(city) %>%
+  count(city, sort = TRUE) %>%
+  mutate(percentage = n / sum(n) * 100) %>%
+  slice(1:10) %>%
+  mutate(city = fct_reorder(city, n, .desc = TRUE)) %>%
+  ggplot() +
+  geom_bar(aes( x= city, y = percentage), stat = "identity")
+```
+
+Also for the non-buyers no big difference in the cities, also the amount of participants get that small that there is no much to say about cities.
+
+#### 3.2.4 Website behavior: number of pages per session
+
+The pages per session is a standard metric in Google Analytics and counts the amount of pages visited in a session. A session is a group of interactions which takes place within a given timeframe. The amount of pages visited could be a possible metric for user engagement on a website, especially for the more content and blog oriented websites. 
+
+**Average pages per session**
+
+The analysis starts with the average pages per session splitted for buyers and non-buyers.
+
+```{r}
+dataset %>%
+  select(giving_product, pages_session) %>%
+  group_by(giving_product) %>%
+  summarise(mean_pages_session = mean(pages_session))
+```
+
+The result is a equal average of pages visited for the buyers and the non-buyers group. This tells not much on difference, therefore a deeper analysis will be done on the pages visited.
+
+**Distribution of count of pages visited**
+
+A analysis will be done on the count instead on the average to see if there are outliers affecting the average.
+
+```{r}
+dataset %>%
+  select(giving_product, pages_session) %>%
+  group_by(giving_product) %>%
+  count(pages_session) %>%
+  ggplot(aes(x = giving_product, y= pages_session))+
+  geom_count()
+```
+
+For the buyers and non-buyers the most pages visited centers between 1.5 and 3. For the group of buyers also more pages are visited that the non-buying group. Meaning that the pages visited could have an impact on the fact is someone buys the product. 
+
+#### 3.2.5 Website behavior: average session duration
+
+**Convert factor to numeric**
+To calculate the average, first the conversion needs to be done from factor to numeric to apply arithmetic calculations. This will be done with the "as.character, as.numeric" function. As this formats leads to NA's, the "hms" function convert the orignal time format to second.
+
+```{r}
+dataset$avg_session_dur <- as.character(dataset$avg_session_dur)
+dataset$avg_session_dur <- hms(dataset$avg_session_dur)
+dataset$avg_session_dur <- as.numeric(dataset$avg_session_dur)
+str(dataset)
+```
+
+**Average sessions duration**
+
+After the conversion from factors to numeric, the calculations can be done on the average session duration. Within the "summarize" function the number of seconds will be converted to minutes.
+
+```{r}
+dataset %>% 
+  select(giving_product, avg_session_dur) %>% 
+  group_by(giving_product) %>% 
+  summarize(average_min = mean(avg_session_dur / 60))
+```
+
+The buyers in average are spending slighty more time on the website then the non-buyers. The same analysis will be done on the distribution.
+
+**Distribution average session duration**
+
+The average scores on the average sessions duration for buyers and non-buyers were closeby, a analysis will be done on the distribution on the count of average session duration.
+
+```{r}
+dataset %>% 
+  select(giving_product, avg_session_dur) %>% 
+  group_by(giving_product) %>% 
+  count(avg_session_dur) %>% 
+  ggplot(aes(x=giving_product, y=avg_session_dur)) +
+  geom_boxplot()
+```
+
+Looking at the counts, it seems that for the buyers, the amount of longer average session duration seems to be higher then for the non-buyers. There is another potential indicator of consumer engagement, which is the time on site/page. This measures how long a visitors stays on a page. 
+
+#### 3.2.6 Website behavior: average time on page
+
+The "average_time_page" feature is almost similair as the "average session duration" metric. The difference is that the "average time on page" only measures the length of a page visited.
+
+Also the "average time on page" is a factor which needs to be converted to numeric for calculation purposes. 
+
+```{r}
+dataset$avg_time_page <- as.character(dataset$avg_time_page)
+dataset$avg_time_page <- hms(dataset$avg_time_page)
+dataset$avg_time_page <- as.numeric(dataset$avg_time_page)
+str(dataset)
+```
+
+```{r}
+dataset %>%
+  select(giving_product, avg_time_page) %>% 
+  group_by(giving_product) %>% 
+  summarize(mean_time_page_seconds = mean(avg_time_page ))
+```
+
+There is a very small difference in the average time of visiting webpages between the buying and non-buying group. The difference between the groups is in average 4 seconds.
+
+#### 3.2.7 Website behavior: session quality
+
+The session quality is a estimate based on Google's machine learning to understand how close a Google Analytics session was to transactions. As transaction are less relevant for this website, it is a less important metric but could still be relevant for this analysis. Google creates a number for every session or session, with a range between 0 and 100 where 0 is not transaction and 100 is probably a transaction.
+
+**Average session quality**
+
+```{r}
+dataset %>%
+  select(giving_product, avg_session_quality) %>%
+  group_by(giving_product) %>%
+  summarise(mean = mean(avg_session_quality))
+```
+
+It seems that the average of the "average session quality" seems to be similair for the buying and non-buying group. Both are almost 20 which means that also both groups are at least far away behavior that estimates if a puchase would be done.
+
+**Distribution of average session quality**
+
+Similair to other website metrics, a deep analysis wille be done on the count to see if there is a bigger difference between the groups.
+
+```{r}
+dataset %>%
+  select(giving_product, avg_session_quality) %>%
+  group_by(giving_product) %>%
+  count(avg_session_quality) %>% 
+  ggplot(aes(x=giving_product, y=avg_session_quality)) +
+  geom_boxplot()
+```
+
+In the boxplot a small difference is being presented where the buying group seems to have slightly higher session quality then the non-buying group.
+
+#### 3.2.8 Website behavior: page type
+
+The 'page type' feature contains more information on the type of pages being visited on the website. There are basically 3 different type of pages: 
+
+1) Blog: these pages are containing written content by employees, customers and experts, not related to a product.
+2) Brand: these pages are "branded" pages and containing information about the brands and are more commercial then blog pages.
+3) Product: these are product pages with mostly more detailed information about the products and what their benefits are.
+
+To understand the effect of pages on buying behavior, the dplyr-functionality is being used together with a plot within the ggplot-functionality. 
+
+```{r}
+dataset %>%
+  select(page_type, giving_product) %>%
+  group_by(giving_product) %>%
+  count(page_type, sort = TRUE) %>%
+  mutate(percentage = n / sum(n) * 100) %>%
+ggplot(aes(x = giving_product, y= percentage, color = page_type))+
+  geom_point()
+```
+
+The 'blog pages' are in both cases the most visited and even more by the non-buyers. Also 'brand' and 'product' pages are showing similair results for both of the groups.
+
+#### 3.2.9 Website behavior: source used
+
+In this section the 'sources' will be futher analysed. A 'source' is most of the time a type of channel that is being used by the visitor to land on the website. Most common channels are for instance Google Search, Facebook or other social media channels. 
+
+**Most sources being used buyers**
+
+With the 'filter' function within 'dyplr', the right selection will be done on the most used sourced by the buying group. With the 'mutate' function the count of buyers will be converted to a percentage to get a better view. 
+
+```{r}
+dataset %>%
+  select(giving_product, source.used) %>%
+  filter(giving_product == "Yes") %>%
+  group_by(giving_product) %>%
+  count(source.used, sort = TRUE) %>%
+  mutate(percentage = n / sum(n) * 100)
+```
+
+In the overview above, very clearly two channels are being used the most by buyers: the paid advertising links in Google (CPC) and the organic links (organic), follow by direct traffic and the e-mail program. 
+
+**Most sources being used non-buyers**
+
+The same analysis will be done for the non-buying group with the use of the same methodology as for the buying group. 
+
+```{r}
+dataset %>%
+  select(giving_product, source.used) %>%
+  filter(giving_product == "No") %>%
+  group_by(giving_product) %>%
+  count(source.used, sort = TRUE) %>%
+  mutate(percentage = n / sum(n) * 100)
+```
+
+The non-buying group are also using the Google Search channel the most but slightly different then the buying group. Most used channel is Google Organic, which are the organic links (not paid) in Google.
+
+#### 3.2.10 EDA conclusion
+
+All features have been analyses which helps in the next section, data preperation. A good analysis is necessary to provide more context in order to prepare for building the machine learning model. Besided that it is also helpful to interpret the results in the right way.
+
+In total there are 8 features being analysed (predictors) and the outcome, buying vs non-buying. Looking towards correlation between these featurs and buying behavior, there seems to be a light connection between the hight of NPS-scores and buying behavior. Especially for the 'promotors', which are people given NPS-scores higher then 9, are better represented in the buying-group then in the non-buying group.  
+
+## 4: Data preperation
+
+In the previous sections all features have been analysed and a first view on the potential predictors has been created. In the 'data preperation' stage, a couple of steps will be taken:
+
+* Dropping not relevant features
+* Converting still existing factors to numeric
+* Checking and removing NA's
+* Checking for imbalance
+
+### 4.1 Dropping not relevant features
+
+First the features that are not relevant will be dropped. The three features that will be dropped are:
+
+* 1 registration_completed 
+* 2 city
+* 4 User ID
+
+To prevent the orginal dataset get's errors, first a copy will be created with the name "dataset_ml". The 'registration' feature will be dropped because it contains no information. The 'city' feature is not relevant based on the analysis being done. And the 'userid' feature is not relevant for building the machine learning model.
+
+```{r}
+dataset_ml <- dataset
+dataset_ml$registration_completed <- NULL
+dataset_ml$city <- NULL
+dataset_ml$userid <- NULL
+str(dataset_ml)
+```
+
+### 4.2 Converting factors to numeric
+
+Converting the 'sources' used to numeric for the machine learning model. The "unclass" function is being used to convert the factor first, then 'as.numeric' is used to convert to numeric. 
+
+**Sources used**
+
+Converting 'sources' used to numeric.
+
+```{r}
+unclass_sources <- unclass(dataset_ml$source.used)
+dataset_ml$source.used <- as.numeric(unclass_sources)
+str(dataset_ml)
+```
+
+**Pages**
+
+Converting the 'pages' factor to numeric.
+
+```{r}
+unclass_pages <- unclass(dataset_ml$page_type)
+dataset_ml$page_type <- as.numeric(unclass_pages)
+str(dataset_ml)
+```
+
+### 4.3 Removing NA's
+
+In the overview above, in the NPS features, NA's are visable. Simply removing them will affect the outcomes of the analysis and prediction. The 'mice' function is used to impute missing values. This function helps to replace missing values with plausible values, in this case based on the 'mean'. 
+
+```{r}
+dataset_na <- mice(dataset_ml, m=1, maxit = 5, method = "mean", seed = 500)
+full_na <- complete(dataset_na, 1)
+dim(full_na)
+str(full_na)
+```
+
+Checking for missing NA's.
+
+```{r}
+(na_count_full_na <- data.frame(sapply(full_na, function(y)sum(length(which(is.na(y)))))))
+```
+
+No missing values detected anymore.
+
+### 4.4 Class imbalance
+
+In the EDA was to see that the amount of buyers is bigger then non-buyers. A check below will be done what the proportion is of the buyers and non-buyers in the test and training set.
+
+```{r}
+options(digits = 2)
+prop.table(table(dataset$giving_product))
+```
+
+There is a 'imbalance' problem with more buyers then non-buyers in the dataset. But imbalance becomes a bigger problem once the group that is important to the prediction, is much smaller then the rest of the group. When training the model the class imbalance will be taken care of with the 'upsampling' function. 
+
+## 5: Training the model
+
+In this section the model will be trained by creating a test and training set. Different machine learning models will be tested at the same time to handle the classification problem.
+
+### 5.1 Creating test and training set
+
+The 'CreateDataPartion' function will be used to create the test and training set. For this assignment a ratio of 75% for the trainings set has been chosen.
+
+```{r}
+set.seed(123)
+y <-full_na$giving_product
+my_index <- createDataPartition(y, times = 1, p = 0.75, list = FALSE)
+x_train <- full_na[my_index, ]
+x_test <- full_na[-my_index, ]
+str(x_train)
+class(y)
+```
+
+### 5.2 Increase performance
+
+To boost speed, first parallel processing will be activited. 
+
+```{r}
+registerDoParallel(3)
+getDoParWorkers()
+set.seed(123)
+```
+
+### 5.3 Cross-validation
+
+Before the actual modeling starts, cross-validation is activited. Cross-validation is used to prevent overfitting. The normal cross-validation is activated with standard the 10-fold validation. As there is a imbalance in the data set, especially for the predicted value("giving_product") with 78% of buyers, the "up-sampling" function will be used. 
+
+```{r}
+my_control <- trainControl(method = "repeatedcv", repeats = 5, number = 10, savePredictions = 'final', classProbs = TRUE, allowParallel = TRUE, sampling = "up", index = createResample(x_train$giving_product))
+```
+
+### 5.4 Train the model
+
+Methods as LDA and QDA are not working well with many predictors in a dataset, same counts for kNN and local regression. In this case there is a binairy classification problem but with multiple predictors and therefore the following models are selected to run the model: Multinom, RF, svmRadial, Adaboost and xgbDart. As the dataset is imbalanced, the "Kappa" metric is used to select the optimal model instead of 'Accuracy'.. The option "PreProcess" is used to center and scale the data.
+
+```{r}
+modeltypes <- list(multinom = caretModelSpec(method = "multinom"), rf = caretModelSpec(method = "rf"), svmRadial = caretModelSpec(method = "svmRadial"), adaboost = caretModelSpec(method = "adaboost"), xgbDart = caretModelSpec(method = "xgbDART"))
+
+models <- caretList(giving_product ~ ., data = x_train, tuneList = modeltypes, metric = "Kappa", continue_on_fail = FALSE, preProcess = c("center", "scale"), trControl = my_control)
+```
+
+```{r}
+models
+```
+
+Looking at the results, 'Multinom' seems to has a lower accuracy but a better Kappa. The 'rf', 'svmradial' and 'adaboost'  have a higher accuracry then 'Multinom' but a lower Kappa. Then the 'xgbDart' is with a slighty higher accuracy and Kappa probably the best solution. First, the evaluation will be done on the test set.
+
+## 6 Evaluation model performance
+
+This assignment is a binairy classification problem, meaning that the model will be evaluated based on accuracy instead of 'RMSE' which is used for regression problems. As the dataset is imbalanced, the 'Accuracy' metric is not the best metric to evaluate the model with. Therefore the 'Kappa' value and the 'ROC-curve' will used to select the best performing model.
+
+### 6.1 ConfusionMatrix results
+
+After training the model, the performance will be checked  on the test data. This will be done via the 'ConfusionMatrix'  combined with the 'predict' functionality.
+
+#### 6.1.1 svmRadial
+
+```{r}
+confusionMatrix(predict(model_list$svmRadial, x_test, type = "raw", return_table = TRUE, dnn = c("Predicted", "Target")),  x_test$giving_product)
+```
+
+The 'svmRadial' has accuracy of 0.6 and a Kappa of 0.021.
+
+#### 6.1.2 Multinom 
+
+```{r}
+confusionMatrix(predict(model_list$multinom, x_test, type = "raw"), x_test$giving_product)
+```
+
+The 'multinom' algorithm has a lower accuracy with 0.57 and a higher Kappa with 0.066.
+
+#### 6.1.3 RF
+
+```{r}
+confusionMatrix(predict(model_list$rf, x_test, type = "raw"), x_test$giving_product)
+```
+
+The algorithm 'rf' has a relatively high accuracy with 0.71 and a low Kappa with 0.004.
+
+#### 6.1.4 Adaboost
+
+```{r}
+confusionMatrix(predict(model_list$adaboost, x_test, type = "raw"), x_test$giving_product)
+```
+
+The 'adaboost' model has a high acuracy with 0.74 and a negative Kappa with -0.04.
+
+#### 6.1.5 xgbDart
+
+```{r}
+confusionMatrix(predict(model_list$xgbDART, x_test, type = "raw"), x_test$giving_product)
+```
+
+The best performing model when looking at Kappa is 'xgbDart' with an accuracy of 0.63 and a Kappa value of 0.05.
+
+To visualize the model performance, a 'list' will be created and used as input for the 'bwplot.
+
+```{r}
+model_overview <- list(multinim = model_list$multinom, rf = model_list$rf, svmradial = model_list$svmRadial, adaboost = model_list$adaboost, xgbDART = model_list$xgbDART)
+res <- resamples(model_overview)
+scales <- list(x =list(relation="free"), y=list(relation="free"))
+bwplot(res, scales=scales)
+```
+
+### 6.2 ROC-curve
+
+The results of the Confusionmatrix and the 'bwplot' gave already a good view on the best performing model. A last evaluation wille be done with the ROC-curve. The ROC-curve shows the trade-off between specificity and sensitivy. Classifiers that give curves closer to the top-left corner, indicating a better performance [source](https://www.displayr.com/what-is-a-roc-curve-how-to-interpret-it/).
+
+The ROC-curve is created by first adding the different models to a list via the 'evalm' function. 
+
+```{r}
+library(MLeval)
+evalm(list(model_list$multinom, model_list$rf, model_list$svmRadial, model_list$adaboost, model_list$xgbDART), gnames = c('multinom', 'rf', 'svmradial', 'adaboost', 'xgbdart'))
+```
+
+A good performing model should be in parallel with the upper left line as much as possible. Analysing the ROC-curve gives quite a similair view as the results coming from ConfusionMatrix results, also here the 'xgbDart' is the best performing model but the 'multinom' model comes quite close.
+
+### 6.3 Model improvement with stacking
+
+Stacking [source](https://www.analyticsvidhya.com/blog/2017/02/introduction-to-ensembling-along-with-implementation-in-r/) is a technique to combine different models together to improve the performance of the algorithm. Also this functionality is part of the 'Caret' package. In this case, the 'caretstack' function is used to combine the different algorithms. The previous models tested, with 'model_list' will be taken as input.
+
+```{r}
+stackcontrol <- trainControl(method = "repeatedcv", number = 10, repeats = 3, savePredictions = TRUE, classProbs = TRUE)
+stack_model <- caretStack(model_list, method="glm", metric="Kappa", trControl = stackcontrol)
+print(stack_model)
+```
+
+The accuracy goes up, but Kappa scores a 0. Let's compare the ROC-curve of the stacked model with the best performing model, 'xgbDart'.
+
+```{r}
+evalm(list( stack_model$ens_model, model_list$xgbDART), gnames = c('stack', 'xgb'))
+```
+
+The 'stacked' model doesn't perform better then the 'xgbDart' model. Therefore the analysis will continue with the 'xgbDart' model.
+
+### 6.4 Variable importancy
+
+Now that the right model is choses, let's have a look at the variable importancy via the 'varImp' functionality.
+
+```{r}
+plot(varImp(object= model_list$xgbDART), main="xgbDart - variable importance")
+```
+
+It seems that 'NPS' is the most important variabele for predicting buying behavior, follow by the 'average sessions quality' and 'average time on page'. This is more or less inline also with the analysis that was already being done on the different features.
+
+## 6.5 Effect of features on predicted outcome
+
+Now that the right model and the most imporant variables are known, last exercise is to understand the marginal effect that these variables have on the predicted outcome. In the 'variable plot' above was to see that the most important variables are 1) NPS, 2) average sessions quality and 3) average time on page. These variables will be deeper analysed
+
+First a new model will be trained but now only with 'xgbDart' model. Based on that model, a plot will be created with the 'partial' function that creates a plot that visualizes the probability of buying behavior of that feature. 
+
+```{r}
+model_x <- train(giving_product ~ ., data = x_train, method = "xgbDART", metric = "Kappa", trControl = my_control)
+```
+
+### 6.5.1 NPS impact
+
+Based on the model above only trained with the 'xgbDart' algorithm, a plot will be created understanding the effect of NPS on the marginal effect on buying behavior.
+
+```{r}
+plot_modelx <- partial(model_list$xgbDART, pred.var = c("nps"), probs = T, which.class = 2, plot = TRUE, rug = TRUE)
+plot_modelx
+```
+
+In this plot is to see that the marginal effect goes up once the NPS-score is increasing.
+
+#### 6.5.2 Average session quality 
+
+```{r}
+plot_modelx <- partial(model_list$xgbDART, pred.var = "avg_session_quality", probs = T, trim.outliers = TRUE, which.class = 2, plot = TRUE, rug = TRUE)
+plot_modelx
+```
+
+For the 'avg_session_quality' the result is different then for the 'NPS-score'. Here there is not a clear linear effect between variable and marginal effect. It seems that with lower quality scores the marginal effect is higher, this is changing onces the score is going up.
+
+#### 6.5.3 Average time on page 
+
+```{r}
+plot_modelx <- partial(model_list$xgbDART, pred.var = "avg_time_page", probs = T, trim.outliers = TRUE, which.class = 2, plot = TRUE, rug = TRUE)
+plot_modelx
+```
+
+Also the 'average time on page' shows that within the lower time spend on pages, a correletion is visible with the marginal effect is has.
+
+#### 6.6 Conclusion
+
+With different evalutation methods used, the right model is chosen which is the 'xgbDart'. As the dataset is imbalanced it was much more difficult to choose the right model as accuracy is less relevant. Therefore the 'Kappa value' and the 'ROC-curve" where more important the the 'Confusionmatrix' results. The 'xgbDart' model leverages 'Gradient Boosting' [source](https://www.shirin-glander.de/2018/11/ml_basics_gbm/). The general idea behind this is that instances, which are hard to predict correctly (“difficult” cases) will be focused on during learning, so that the model learns from past mistakes. The disadvantage of this model that is relatively slow.
+
+With the use of the right model, the most important variables where being searched for. In the 'variable importancy' plot was to see that the 'NPS-score' was the most powerful variables, followed by the 'session quality' and 'average time on page'. With the use of the 'partial' function that visualizes the marginal effect on the variable on buying behavior, very clearly was to see that only the 'NPS-score' is the feature that can influences buying behavior.
+
+## 7 Final conclusion
+
+The main question of this assignment is, **how can we predict buying behavior?**. To answer that question a 'Exploratory Data Analysis' has being done to get already a first view on the features and their chances to be the most important predictor. Already from this analysis, the 'NPS' score seemed to be the best candidate. After testing different models and selecting the right model, which was more difficult as the dataset is imbalanced,  the 'xgbDart' model seems to best performing model with an accuracy of 0.63 and a Kappa value of 0.05. Also 'stacking' was being used to see if the performance could increase with the use of different models together. But based on the 'ROC-curve' comparing the two models, the 'xgbDart' was still the best performing model.
+
+In the 'variable importancy plot' is very clearly to see that 'nps' is the most important variable helping to predict buying behavior. The other variables seemed to be less effective after further analysis. The recommendation here to first start understanding how to improve the NPS-scores and using Machine Learning algorithm understanding the effects. Further recommendation would be to increase the amount of data and ensuring data quality to also see the effect of the other potential predictors of buying behavior. 
+
+```{r}
+library(knitr)
+purl("predict_buying_behavior.rmd")
+```
+
+
+
